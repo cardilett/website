@@ -91,7 +91,7 @@ export default function Differentiators() {
   return (
     <section className="diff" data-theme="cream" id="differentiators">
       <div className="section__bg-img" aria-hidden="true">
-        <img src="/img/uae-burj-al-arab.jpg" alt="" className="parallax-img" />
+        <img src="/img/uae-burj-al-arab.jpg" alt="" className="parallax-img" loading="lazy" decoding="async" />
       </div>
 
       <div className="section__head">

@@ -71,7 +71,8 @@
   --max: 1200px;
   --max-wide: 1320px;
   --gutter: clamp(22px, 5vw, 64px);
-  --section-pad: clamp(88px, 12vw, 200px);
+  /* One consistent vertical rhythm for every section (top === bottom) */
+  --section-pad: clamp(40px, 5vw, 64px);
 }
 
 /* -----------------------  RESET  ----------------------- */
@@ -447,7 +448,7 @@ main > section:first-child:not(.hero) {
 
 .section__head {
   max-width: var(--max);
-  margin: 0 auto clamp(48px, 7vw, 96px);
+  margin: 0 auto clamp(24px, 3vw, 40px);
   position: relative;
   z-index: 2;
 }
@@ -928,14 +929,10 @@ main > section:first-child:not(.hero) {
 }
 
 /* -----------------------  ABOUT  ----------------------- */
-/* About and Team share the same sand background — tighten the seam between them */
-.about { padding-bottom: clamp(40px, 5vw, 80px); }
-.team { padding-top: clamp(40px, 5vw, 80px); padding-bottom: clamp(28px, 3.5vw, 48px); }
-.team .section__head { margin-bottom: clamp(28px, 3.5vw, 48px); }
+/* Team and every other section now share one symmetric rhythm via --section-pad;
+   no per-section padding overrides so every seam is identical. */
 /* Founder grid is empty for now — drop the card's trailing margin */
 .team .founder { margin-bottom: 0; }
-/* Tighten the seam into whatever section follows the founder block */
-.team + section { padding-top: clamp(28px, 3.5vw, 48px); }
 
 .about__grid {
   max-width: var(--max);

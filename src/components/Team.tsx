@@ -35,7 +35,7 @@ export default function Team() {
           </p>
         </div>
         <div className="founder__photo" aria-hidden="true">
-          <img src="/img/hayat-founder.jpg" alt="Hayat Ali Al Hosani" />
+          <img src="/img/hayat-founder.jpg" alt="Hayat Ali Al Hosani" loading="lazy" decoding="async" />
         </div>
       </article>
 

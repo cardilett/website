@@ -87,7 +87,7 @@ export default function Services({ preview = false }: ServicesProps) {
   return (
     <section className="services" data-theme="sand" id="services">
       <div className="section__bg-img" aria-hidden="true">
-        <img src="/img/team-laptops.jpg" alt="" className="parallax-img" />
+        <img src="/img/team-laptops.jpg" alt="" className="parallax-img" loading="lazy" decoding="async" />
       </div>
 
       <div className="section__head section__head--centered">
