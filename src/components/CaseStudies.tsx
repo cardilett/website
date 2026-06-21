@@ -48,6 +48,18 @@ export default function CaseStudies() {
           </p>
           <span className="case__tag">People &amp; Culture</span>
         </article>
+
+        <article className="case reveal">
+          <div className="case__metric">
+            40<span>%</span>
+          </div>
+          <h3>Time-to-decision reduced</h3>
+          <p>
+            Redrew decision rights and delegation of authority for a government-linked group —
+            cutting approval cycles without loosening governance.
+          </p>
+          <span className="case__tag">Org Design &amp; Governance</span>
+        </article>
       </div>
 
       <div className="cases__note reveal">

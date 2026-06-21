@@ -1772,7 +1772,7 @@ main > section:first-child:not(.hero) {
 
 @media (max-width: 900px) {
   .founder { grid-template-columns: 1fr; justify-items: start; gap: 22px; }
-  .founder__photo { width: clamp(150px, 45vw, 210px); }
+  .founder__photo { width: clamp(150px, 45vw, 210px); justify-self: center; }
 }
 
 .team__grid {
