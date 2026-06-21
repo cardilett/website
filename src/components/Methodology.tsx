@@ -83,17 +83,6 @@ export default function Methodology() {
         This flow reflects our project-based engagement. Advisory and retainer models are tailored
         to match the cadence of your organisation.
       </p>
-
-      <div className="method__banner reveal" aria-hidden="true">
-        <img src="/img/team-strategy.jpg" alt="" />
-        <div className="method__banner-overlay">
-          <span className="eyebrow">Evidence-led</span>
-          <p>
-            Every intervention begins with a diagnosis — every hand-off ends with capability your
-            team owns.
-          </p>
-        </div>
-      </div>
     </section>
   );
 }
