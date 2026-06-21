@@ -59,7 +59,7 @@ export default function Footer() {
             <h5>Connect</h5>
             <ul>
               <li>
-                <a href="mailto:info@cardilett.ae">info@cardilett.ae</a>
+                <a href="mailto:info@cardilett.ae">connect@cardilett.ae</a>
               </li>
               <li>
                 <a href="#" aria-label="Cardilett on LinkedIn">
@@ -67,7 +67,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>Abu Dhabi, United Arab Emirates</li>
-              <li>Sun–Thu · 09:00–18:00 GST</li>
+              <li>Sun–Thu · 08:00–16:00 UAE time</li>
             </ul>
           </div>
         </div>

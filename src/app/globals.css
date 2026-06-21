@@ -412,11 +412,18 @@ em {
 }
 
 @media (max-width: 960px) {
+  /* Collapse to brand (left) + burger (right), pinned to the corners */
+  .nav__inner { display: flex; justify-content: space-between; align-items: center; }
   .nav__menu { display: none; }
   .nav__cta { display: none; }
-  .nav__toggle { display: block; }
+  .nav__toggle { display: block; margin-left: auto; flex-shrink: 0; }
   .nav.is-open .nav__drawer { display: flex; flex-direction: column; }
-  .nav.is-open { background: var(--bg); }
+  /* Open drawer always uses the light panel — force readable dark text,
+     even when the nav is in dark-theme (is-dark) mode */
+  .nav.is-open { background: var(--bg); color: var(--text); }
+  .nav.is-open .nav__brand-logo { filter: none; }
+  .nav.is-open .nav__drawer a { color: var(--text); opacity: 1; }
+  .nav.is-open .nav__drawer-cta { color: var(--crimson) !important; }
 }
 
 /* -----------------------  LAYOUT HELPERS  ----------------------- */
@@ -2202,8 +2209,22 @@ main > section:first-child:not(.hero) {
 }
 
 @media (max-width: 900px) {
-  .contact__grid { grid-template-columns: 1fr; }
+  .contact__grid { grid-template-columns: 1fr; gap: 32px; }
   .contact__form { grid-template-columns: 1fr; }
+}
+
+/* Compact the form so it fits the phone viewport without clipping */
+@media (max-width: 600px) {
+  /* Contact is the first section here — trim the nav-clearing top padding */
+  main > section.contact:first-child { padding-top: 92px; }
+  .contact__form { padding: 24px 20px; gap: 16px; }
+  .field input[type="text"],
+  .field input[type="email"],
+  .field select,
+  .field textarea { padding: 9px 2px; }
+  .field textarea { min-height: 80px; }
+  .contact__meta { margin-top: 28px; gap: 12px; }
+  .contact__row { padding: 11px 0; }
 }
 
 /* -----------------------  FOOTER  ----------------------- */

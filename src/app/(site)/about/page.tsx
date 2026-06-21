@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import About from '@/components/About';
+import Commitments from '@/components/Commitments';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function AboutPage() {
   return (
     <main>
       <About />
+      <Commitments />
       <CTASection />
     </main>
   );
