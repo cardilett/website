@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Newsreader } from 'next/font/google';
 import Script from 'next/script';
+import { GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 
 const inter = Inter({
@@ -37,12 +38,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
-            <Script
-        id="cookie-script"
-        src="https://cdn.cookie-script.com/s/f1321dd832fdfbcc1cd53c338b3caf90.js"
-        strategy="beforeInteractive"
-      />
+      <GoogleTagManager gtmId="GTM-M7RNN9GQ" />
+      <body suppressHydrationWarning>
+        {children}
+        <Script
+          id="cookie-script"
+          src="https://cdn.cookie-script.com/s/f1321dd832fdfbcc1cd53c338b3caf90.js"
+          strategy="beforeInteractive"
+        />
+      </body>
     </html>
   );
 }
