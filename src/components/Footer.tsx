@@ -59,7 +59,7 @@ export default function Footer() {
             <h5>Connect</h5>
             <ul>
               <li>
-                <a href="mailto:info@cardilett.ae">connect@cardilett.ae</a>
+                <a href="mailto:connect@cardilett.ae">connect@cardilett.ae</a>
               </li>
               <li>
                 <a href="#" aria-label="Cardilett on LinkedIn">
