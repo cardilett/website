@@ -83,7 +83,7 @@ async function sendNotificationEmail(fields: {
 
   await transporter.sendMail({
     from: process.env.SMTP_FROM ?? 'Cardilett <contact@cardilett.com>',
-    to: 'contact@cardilett.com',
+    to: process.env.CONTACT_TO ?? 'connect@cardilett.ae',
     replyTo: email,
     subject: `New enquiry — ${name}${company ? ` · ${company}` : ''}`,
     html: buildEmailHtml({ name, email, company, need, message }),
