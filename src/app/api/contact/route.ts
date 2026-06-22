@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
+import { getDbPool } from '@/lib/db';
 
 interface ContactPayload {
   name: string;
@@ -11,16 +12,6 @@ interface ContactPayload {
 }
 
 export async function POST(req: NextRequest) {
-  if (!process.env.RESEND_API_KEY) {
-    console.error('[contact] RESEND_API_KEY is not set');
-    return NextResponse.json(
-      { error: 'Email service is not configured.' },
-      { status: 503 }
-    );
-  }
-
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
   let body: ContactPayload;
   try {
     body = await req.json();
@@ -43,31 +34,61 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
   }
 
-  const from = process.env.RESEND_FROM ?? 'Cardilett <onboarding@resend.dev>';
-  const to = process.env.RESEND_TO ?? 'connect@cardilett.ae';
-
-  const { data, error } = await resend.emails.send({
-    from,
-    to: [to],
-    replyTo: email,
-    subject: `New enquiry — ${name}${company ? ` · ${company}` : ''}`,
-    html: buildEmailHtml({ name, email, company, need, message }),
-  });
-
-  if (error) {
-    console.error('[contact] Resend error:', error);
+  try {
+    const pool = getDbPool();
+    await pool.execute(
+      'INSERT INTO contact_submissions (name, email, company, need, message, consent) VALUES (?, ?, ?, ?, ?, ?)',
+      [name, email, company, need, message, consent ? 1 : 0]
+    );
+  } catch (err) {
+    console.error('[contact] Database insert failed:', err);
     return NextResponse.json(
-      { error: 'Failed to send your message. Please try again.' },
+      { error: 'Failed to save your message. Please try again.' },
       { status: 500 }
     );
   }
 
-  return NextResponse.json({ success: true, id: data?.id });
+  // The submission is safely stored — a failure here shouldn't fail the request.
+  try {
+    await sendNotificationEmail({ name, email, company, need, message });
+  } catch (err) {
+    console.error('[contact] Notification email failed:', err);
+  }
+
+  return NextResponse.json({ success: true });
 }
 
 // ---------------------------------------------------------------------------
-// Email template
+// Notification email (Hostinger SMTP)
 // ---------------------------------------------------------------------------
+
+async function sendNotificationEmail(fields: {
+  name: string;
+  email: string;
+  company: string;
+  need: string;
+  message: string;
+}) {
+  const { name, email, company, need, message } = fields;
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST ?? 'smtp.hostinger.com',
+    port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 465,
+    secure: process.env.SMTP_SECURE !== 'false',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
+    },
+  });
+
+  await transporter.sendMail({
+    from: process.env.SMTP_FROM ?? 'Cardilett <contact@cardilett.com>',
+    to: 'contact@cardilett.com',
+    replyTo: email,
+    subject: `New enquiry — ${name}${company ? ` · ${company}` : ''}`,
+    html: buildEmailHtml({ name, email, company, need, message }),
+  });
+}
 
 function esc(s: string): string {
   return s
