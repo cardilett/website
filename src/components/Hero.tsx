@@ -14,14 +14,17 @@ export default function Hero() {
   return (
     <section className="hero" data-theme="hero">
       <div className="hero__bg" aria-hidden="true">
-        <img
-          src="/img/header-bg.jpg"
-          alt=""
-          fetchPriority="high"
-          decoding="async"
-          width={1600}
-          height={900}
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/img/header-bg-mobile.png" />
+          <img
+            src="/img/header-bg-web.png"
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+            width={1600}
+            height={900}
+          />
+        </picture>
       </div>
 
       <div className="hero__inner">
