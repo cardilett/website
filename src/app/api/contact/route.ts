@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
 }
 
 // ---------------------------------------------------------------------------
-// Notification email (Microsoft 365 SMTP)
+// Notification email (Hostinger SMTP)
 // ---------------------------------------------------------------------------
 
 async function sendNotificationEmail(fields: {
@@ -72,10 +72,9 @@ async function sendNotificationEmail(fields: {
   const { name, email, company, need, message } = fields;
 
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST ?? 'smtp.office365.com',
-    port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 587,
-    secure: false,
-    requireTLS: true,
+    host: process.env.SMTP_HOST ?? 'smtp.hostinger.com',
+    port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 465,
+    secure: process.env.SMTP_SECURE !== 'false',
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASSWORD,
