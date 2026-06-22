@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Newsreader } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const inter = Inter({
@@ -37,6 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body suppressHydrationWarning>{children}</body>
+      <Script
+        id="cookie-script"
+        src="https://cdn.cookie-script.com/s/6c02588cb50acb295a690ae03b218ade.js"
+        strategy="beforeInteractive"
+      />
     </html>
   );
 }
