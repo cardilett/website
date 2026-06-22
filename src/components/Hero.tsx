@@ -12,18 +12,15 @@ const TRUST = [
 
 export default function Hero() {
   return (
-    <section className="hero" data-theme="sand">
+    <section className="hero" data-theme="hero">
       <div className="hero__bg" aria-hidden="true">
         <img
-          src="/img/AUH-landscape-2400.jpg"
-          srcSet="/img/AUH-landscape-1200.jpg 1200w, /img/AUH-landscape-2400.jpg 2200w"
-          sizes="100vw"
+          src="/img/header-bg.jpg"
           alt=""
-          className="parallax-img"
           fetchPriority="high"
           decoding="async"
-          width={2200}
-          height={1467}
+          width={1600}
+          height={900}
         />
       </div>
 

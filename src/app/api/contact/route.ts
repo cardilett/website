@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
   }
 
   const from = process.env.RESEND_FROM ?? 'Cardilett <onboarding@resend.dev>';
-  const to = process.env.RESEND_TO ?? 'info@cardilett.ae';
+  const to = process.env.RESEND_TO ?? 'connect@cardilett.ae';
 
   const { data, error } = await resend.emails.send({
     from,
