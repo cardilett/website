@@ -38,9 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <body suppressHydrationWarning>{children}</body>
-      <Script
+            <Script
         id="cookie-script"
-        src="https://cdn.cookie-script.com/s/6c02588cb50acb295a690ae03b218ade.js"
+        src="https://cdn.cookie-script.com/s/f1321dd832fdfbcc1cd53c338b3caf90.js"
         strategy="beforeInteractive"
       />
     </html>
