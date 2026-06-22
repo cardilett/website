@@ -2083,7 +2083,15 @@ main > section:first-child:not(.hero) {
   align-items: start;
 }
 
+/* Grid items default to min-width:auto, which lets long tokens (e.g. the
+   email address) push the column wider than its track — overflowing the
+   section and getting clipped by .contact's overflow:hidden. Allow shrink. */
+.contact__left,
+.contact__form { min-width: 0; }
+
 .contact__left .section__title { max-width: 14ch; }
+.contact__row a,
+.contact__row span { overflow-wrap: anywhere; }
 
 .contact__lede {
   margin-top: 24px;
@@ -2134,7 +2142,12 @@ main > section:first-child:not(.hero) {
   color: var(--text);
 }
 
-.field { display: flex; flex-direction: column; gap: 8px; }
+/* min-width:0 so a long <select>/<option> can't force the field (and the
+   whole form) wider than its grid track */
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.field input,
+.field select,
+.field textarea { max-width: 100%; min-width: 0; }
 .field--full { grid-column: 1 / -1; }
 .field--check { flex-direction: row; align-items: flex-start; gap: 12px; padding-top: 4px; }
 
