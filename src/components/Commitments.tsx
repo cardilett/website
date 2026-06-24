@@ -1,3 +1,5 @@
+import SectionCTA from '@/components/SectionCTA';
+
 const PILLARS = [
   {
     num: '01',
@@ -39,6 +41,8 @@ export default function Commitments() {
           </article>
         ))}
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

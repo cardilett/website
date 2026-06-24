@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SectionCTA from '@/components/SectionCTA';
 
 interface Service {
   num: string;
@@ -139,6 +140,8 @@ export default function Services({ preview = false }: ServicesProps) {
           ))}
         </div>
       )}
+
+      <SectionCTA />
     </section>
   );
 }

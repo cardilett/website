@@ -1,3 +1,5 @@
+import SectionCTA from '@/components/SectionCTA';
+
 export default function CaseStudies() {
   return (
     <section className="cases" data-theme="sand" id="cases">
@@ -69,6 +71,8 @@ export default function CaseStudies() {
           confidential walkthrough.
         </p>
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

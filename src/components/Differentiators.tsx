@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import SectionCTA from '@/components/SectionCTA';
 
 interface Diff {
   title: string;
@@ -117,6 +118,8 @@ export default function Differentiators() {
           </article>
         ))}
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

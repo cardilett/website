@@ -22,7 +22,12 @@ const NEEDS = [
 const CONTACT_ROWS = [
   { label: 'Email', value: 'connect@cardilett.ae', href: 'mailto:connect@cardilett.ae' },
   { label: 'Office', value: 'Abu Dhabi, United Arab Emirates' },
-  { label: 'LinkedIn', value: 'Cardilett HR Consultancy', href: '#', ariaLabel: 'LinkedIn' },
+  {
+    label: 'LinkedIn',
+    value: 'Cardilett HR Advisory and Consultancy',
+    href: 'https://www.linkedin.com/company/cardilett/',
+    ariaLabel: 'Cardilett on LinkedIn',
+  },
   { label: 'Hours', value: 'Mon–Fri · 08:00–16:00 UAE time' },
 ];
 
@@ -95,7 +100,13 @@ export default function Contact() {
               <div key={label} className="contact__row">
                 <span className="contact__label">{label}</span>
                 {href ? (
-                  <a href={href} {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}>
+                  <a
+                    href={href}
+                    {...(href.startsWith('http')
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : {})}
+                    {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
+                  >
                     {value}
                   </a>
                 ) : (

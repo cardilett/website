@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import About from '@/components/About';
 import Commitments from '@/components/Commitments';
+import Industries from '@/components/Industries';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function AboutPage() {
     <main>
       <About />
       <Commitments />
+      <Industries />
       <CTASection />
     </main>
   );
