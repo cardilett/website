@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface Step {
   num: string;
   title: string;
@@ -49,7 +51,7 @@ const STEPS: Step[] = [
 
 export default function Methodology() {
   return (
-    <section className="method" data-theme="skylight" id="methodology">
+    <section className="method" id="methodology">
       <div className="section__head">
         <span className="eyebrow reveal">How We Work</span>
         <h2 className="section__title reveal">
@@ -62,19 +64,42 @@ export default function Methodology() {
       </div>
 
       <div className="method__flow">
-        <div className="method__line" aria-hidden="true" />
+        {/* Wave connector — x-coords are proportional (6 equal columns), y-coords in px matching step offsets */}
+        <svg
+          className="method__wave"
+          viewBox="0 0 1000 290"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M 83,212 C 140,212 193,174 250,174 C 307,174 360,140 417,140 C 474,140 526,114 583,114 C 640,114 693,88 750,88 C 807,88 860,66 917,66"
+            stroke="rgba(100,150,200,0.22)"
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+          />
+        </svg>
 
-        {STEPS.map((step) => (
+        {STEPS.map((step, i) => (
           <article key={step.num} className="step reveal">
-            <div className="step__head">
-              <span className="step__num">{step.num}</span>
-              <h3>{step.title}</h3>
+            <span className="step__num">{step.num}</span>
+            <div className="step__icon">
+              <Image
+                src={`/img/services/Mask group-${i + 1}.png`}
+                alt={step.title}
+                width={72}
+                height={72}
+                style={{ width: '100%', height: 'auto' }}
+              />
             </div>
-            <ul>
-              {step.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <div className="step__body">
+              <h3>{step.title}</h3>
+              <ul>
+                {step.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </article>
         ))}
       </div>
