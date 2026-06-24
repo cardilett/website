@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Newsreader } from 'next/font/google';
 import Script from 'next/script';
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 const inter = Inter({
@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <GoogleTagManager gtmId="GTM-KT6J7WNS" />
+      <GoogleAnalytics gaId="G-B134EYVR2K" />
       <body suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
