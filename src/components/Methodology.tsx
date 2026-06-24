@@ -1,17 +1,15 @@
-import { type ReactNode } from 'react';
+import Image from 'next/image';
 import SectionCTA from '@/components/SectionCTA';
 
 interface Step {
-  key: string;
+  num: string;
   title: string;
   items: string[];
-  /** Icon that visually echoes the step's title. */
-  icon: ReactNode;
 }
 
 const STEPS: Step[] = [
   {
-    key: 'diagnose',
+    num: '01',
     title: 'Diagnose',
     items: [
       'Initial consultation & needs analysis',
@@ -19,20 +17,9 @@ const STEPS: Step[] = [
       'Stakeholder interviews & surveys',
       'SWOT analysis',
     ],
-    icon: (
-      <>
-        <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" strokeWidth="1.7" />
-        <path
-          d="M21 21l-5.3-5.3"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-        />
-      </>
-    ),
   },
   {
-    key: 'design',
+    num: '02',
     title: 'Design',
     items: [
       'Align with business strategy',
@@ -40,90 +27,32 @@ const STEPS: Step[] = [
       'Create actionable frameworks',
       'Piloting',
     ],
-    icon: (
-      <path
-        d="M14.5 5.5l4 4M4.5 20l1-4L16 5.5a2.1 2.1 0 0 1 3 3L8.5 19l-4 1Z"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    ),
   },
   {
-    key: 'discuss',
+    num: '03',
     title: 'Discuss',
     items: ['Present findings', 'Define scope & deliverables', 'Value-based pricing'],
-    icon: (
-      <>
-        <path
-          d="M20 11.4a7.4 7.4 0 0 1-10.8 6.6L4.5 19.4l1.3-4.1A7.4 7.4 0 1 1 20 11.4Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path d="M9 10.4h6M9 13.4h4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-      </>
-    ),
   },
   {
-    key: 'implement',
+    num: '04',
     title: 'Implement',
     items: ['Action planning', 'Change management strategy', 'System integration'],
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="3.1" stroke="currentColor" strokeWidth="1.7" />
-        <path
-          d="M19.4 13a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-2.87 1.2V21a2 2 0 1 1-4 0v-.07a1.7 1.7 0 0 0-2.87-1.2l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 13H4a2 2 0 1 1 0-4h.07a1.7 1.7 0 0 0 1.2-2.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 11 4.6V4a2 2 0 1 1 4 0v.07a1.7 1.7 0 0 0 2.87 1.2l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 11H20a2 2 0 1 1 0 4h-.07Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </>
-    ),
   },
   {
-    key: 'measure',
+    num: '05',
     title: 'Measure',
     items: ['Monitor KPIs', 'Feedback loops', 'Continuous improvement'],
-    icon: (
-      <path
-        d="M4 20h16M7.5 20v-5.5M12 20v-9.5M16.5 20v-4"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    ),
   },
   {
-    key: 'enable',
+    num: '06',
     title: 'Enable',
     items: ['Provide clear client guidelines', 'Run training sessions', 'Handover & sustain'],
-    icon: (
-      <>
-        <path
-          d="M12 4 2.8 9 12 14l9.2-5L12 4Z"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M6.4 11v4.2c0 1.6 2.5 2.8 5.6 2.8s5.6-1.2 5.6-2.8V11"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </>
-    ),
   },
 ];
 
 export default function Methodology() {
   return (
-    <section className="method" data-theme="skylight" id="methodology">
+    <section className="method" id="methodology">
       <div className="section__head">
         <span className="eyebrow reveal">How We Work</span>
         <h2 className="section__title reveal">
@@ -136,23 +65,42 @@ export default function Methodology() {
       </div>
 
       <div className="method__flow">
-        <div className="method__line" aria-hidden="true" />
+        {/* Wave connector — x-coords are proportional (6 equal columns), y-coords in px matching step offsets */}
+        <svg
+          className="method__wave"
+          viewBox="0 0 1000 290"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M 83,212 C 140,212 193,174 250,174 C 307,174 360,140 417,140 C 474,140 526,114 583,114 C 640,114 693,88 750,88 C 807,88 860,66 917,66"
+            stroke="rgba(100,150,200,0.22)"
+            strokeWidth="1.5"
+            fill="none"
+            strokeLinecap="round"
+          />
+        </svg>
 
-        {STEPS.map((step) => (
-          <article key={step.key} className="step reveal">
-            <div className="step__head">
-              <span className="step__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  {step.icon}
-                </svg>
-              </span>
-              <h3>{step.title}</h3>
+        {STEPS.map((step, i) => (
+          <article key={step.num} className="step reveal">
+            <span className="step__num">{step.num}</span>
+            <div className="step__icon">
+              <Image
+                src={`/img/services/Mask group-${i + 1}.png`}
+                alt={step.title}
+                width={72}
+                height={72}
+                style={{ width: '100%', height: 'auto' }}
+              />
             </div>
-            <ul>
-              {step.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <div className="step__body">
+              <h3>{step.title}</h3>
+              <ul>
+                {step.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </article>
         ))}
       </div>

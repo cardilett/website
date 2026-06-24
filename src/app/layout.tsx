@@ -40,6 +40,30 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
       <GoogleTagManager gtmId="GTM-KT6J7WNS" />
       <body suppressHydrationWarning>
+        {/* Google Consent Mode v2 default — a plain inline script (not
+            next/script) so React 19 renders it in place and the browser runs it
+            during HTML parse, before GTM loads. Tags start denied and wait for
+            the CookieScript banner's consent update. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied',
+                functionality_storage: 'denied',
+                personalization_storage: 'denied',
+                security_storage: 'granted',
+                wait_for_update: 500
+              });
+              gtag('set', 'ads_data_redaction', true);
+              gtag('set', 'url_passthrough', true);
+            `,
+          }}
+        />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
