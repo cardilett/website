@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="hero" data-theme="hero">
       <div className="hero__bg" aria-hidden="true">
         <picture>
-          <source media="(max-width: 768px)" srcSet="/img/header-bg-mobile.png" />
+          <source media="(max-width: 600px)" srcSet="/img/mobile-header-bg.jpg" />
           <img
             src="/img/header-bg-web.png"
             alt=""

@@ -993,6 +993,27 @@ main>section:first-child:not(.hero) {
   .hero__trust-label {
     font-size: 14px;
   }
+
+  /* Mobile hero: portrait photo with people up top, content drops into
+     the lower blue area of the image */
+  .hero {
+    justify-content: flex-end;
+    padding-top: clamp(140px, 38vh, 360px);
+    padding-bottom: clamp(40px, 7vh, 72px);
+  }
+  .hero__bg img {
+    object-position: 60% top;
+  }
+  .hero::before {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 30%,
+      rgba(20, 22, 38, 0.35) 48%,
+      rgba(20, 22, 38, 0.82) 70%,
+      rgba(20, 22, 38, 0.92) 100%
+    );
+  }
 }
 
 /* Hero CTA: outlined gold ghost button on the photo background */
