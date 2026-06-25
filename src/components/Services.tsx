@@ -6,7 +6,6 @@ interface Service {
   title: string;
   body: string;
   featured?: boolean;
-  badge?: string;
 }
 
 const SERVICES: Service[] = [
@@ -15,7 +14,6 @@ const SERVICES: Service[] = [
     title: 'HR Transformation & Tech Enablement',
     body: 'From HRIS selection to digital workflows — modernising the function with technology that actually lands.',
     featured: true,
-    badge: 'Premium',
   },
   {
     num: '02',
@@ -135,7 +133,6 @@ export default function Services({ preview = false }: ServicesProps) {
               <div className="service__num">{s.num}</div>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
-              {s.badge && <span className="service__badge">{s.badge}</span>}
             </article>
           ))}
         </div>

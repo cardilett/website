@@ -1372,20 +1372,6 @@ main>section:first-child:not(.hero) {
   max-width: 60ch;
 }
 
-.service__badge {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--crimson);
-  background: var(--gold-soft);
-  padding: 5px 11px;
-  border-radius: var(--r-pill);
-  font-weight: 700;
-}
-
 .services__more {
   max-width: var(--max);
   margin: clamp(40px, 5vw, 64px) auto 0;
