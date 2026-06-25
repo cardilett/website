@@ -1,3 +1,5 @@
+import SectionCTA from '@/components/SectionCTA';
+
 interface Member {
   name: string;
   role: string;
@@ -54,6 +56,8 @@ export default function Team() {
           </article>
         ))}
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

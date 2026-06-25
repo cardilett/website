@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import SectionCTA from '@/components/SectionCTA';
 
 interface Quote {
   /** Full recommendation text. */
@@ -154,6 +155,8 @@ export default function Testimonials() {
           </div>
         ))}
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

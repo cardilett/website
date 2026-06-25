@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SectionCTA from '@/components/SectionCTA';
 
 interface Insight {
   title: string;
@@ -60,6 +61,8 @@ export default function Insights() {
           />
         </svg>
       </Link>
+
+      <SectionCTA />
     </section>
   );
 }

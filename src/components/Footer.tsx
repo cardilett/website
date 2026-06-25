@@ -62,7 +62,12 @@ export default function Footer() {
                 <a href="mailto:connect@cardilett.ae">connect@cardilett.ae</a>
               </li>
               <li>
-                <a href="#" aria-label="Cardilett on LinkedIn">
+                <a
+                  href="https://www.linkedin.com/company/cardilett/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Cardilett on LinkedIn"
+                >
                   LinkedIn
                 </a>
               </li>
@@ -74,7 +79,7 @@ export default function Footer() {
       </div>
 
       <div className="foot__bottom">
-        <span>© {YEAR} Cardilett HR Consultancy. All rights reserved.</span>
+        <span>© {YEAR} Cardilett HR Advisory and Consultancy. All rights reserved.</span>
         <span>100% Emirati-owned · Abu Dhabi, UAE</span>
       </div>
     </footer>

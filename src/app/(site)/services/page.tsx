@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Services from '@/components/Services';
 import Methodology from '@/components/Methodology';
-import Industries from '@/components/Industries';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
@@ -15,7 +14,6 @@ export default function ServicesPage() {
     <main>
       <Services />
       <Methodology />
-      <Industries />
       <CTASection
         title={
           <>

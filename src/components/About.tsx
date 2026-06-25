@@ -1,3 +1,5 @@
+import SectionCTA from '@/components/SectionCTA';
+
 export default function About() {
   return (
     <section className="about" data-theme="sand" id="about">
@@ -11,8 +13,17 @@ export default function About() {
 
       <div className="about__grid">
         <div className="about__left">
+          {/*
+            Brand-fit alternatives ready to swap in (just change the src):
+              /img/AUH-skyline.jpg        Abu Dhabi skyline (current — matches the caption)
+              /img/uae-dubai-skyline.jpg  UAE reach (Dubai skyline at dusk)
+              /img/team-office.jpg        Modern workplace interior
+            NOTE: the original /img/AUH-landscape-*.jpg files have a stock
+            "Your paragraph text" watermark baked in — AUH-skyline.jpg is the
+            cleaned (cropped) version, so prefer it over those.
+          */}
           <figure className="about__figure reveal" aria-hidden="true">
-            <img src="/img/uae-burj-al-arab-aerial.jpg" alt="" />
+            <img src="/img/AUH-skyline.jpg" alt="" />
             <figcaption>Rooted in Abu Dhabi. Reach across the UAE.</figcaption>
           </figure>
         </div>
@@ -33,6 +44,8 @@ export default function About() {
           </p>
         </div>
       </div>
+
+      <SectionCTA />
     </section>
   );
 }

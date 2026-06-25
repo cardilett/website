@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SectionCTA from '@/components/SectionCTA';
 
 interface Step {
   num: string;
@@ -108,6 +109,8 @@ export default function Methodology() {
         This flow reflects our project-based engagement. Advisory and retainer models are tailored
         to match the cadence of your organisation.
       </p>
+
+      <SectionCTA />
     </section>
   );
 }
