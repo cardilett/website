@@ -966,7 +966,7 @@ main>section:first-child:not(.hero) {
   font-weight: 780;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--sand);
+  color: #FCF2E8;
 }
 
 .hero__trust-num span {
