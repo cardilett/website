@@ -54,11 +54,13 @@ export default function PrivacyPolicyPage() {
               enquiring about, any message you provide, and your consent to be contacted.
             </li>
             <li>
-              <strong>Usage and analytics data.</strong> We use Google Analytics 4 to collect
-              information about how visitors interact with the Site, including pages viewed,
-              time on site, approximate location (derived from IP address), device and browser
-              type, and referral source. This data is collected in aggregated or pseudonymised
-              form and is not used to directly identify you.
+              <strong>Usage and analytics data.</strong> We use Google Analytics 4 and
+              Microsoft Clarity to collect information about how visitors interact with the
+              Site, including pages viewed, time on site, approximate location (derived from IP
+              address), device and browser type, referral source, and on-page behaviour such as
+              clicks, scrolling, and mouse movement (via session recordings and heatmaps). This
+              data is collected in aggregated or pseudonymised form and is not used to directly
+              identify you.
             </li>
             <li>
               <strong>Cookie and consent data.</strong> We use CookieScript to manage cookie
@@ -98,9 +100,10 @@ export default function PrivacyPolicyPage() {
               and cannot be disabled.
             </li>
             <li>
-              <strong>Analytics cookies</strong> (Google Analytics 4, via Google Tag Manager)
-              are only set once you provide consent, and help us understand Site usage in
-              aggregate.
+              <strong>Analytics cookies</strong> (Google Analytics 4, via Google Tag Manager,
+              and Microsoft Clarity) are only set once you provide consent, and help us
+              understand Site usage in aggregate, including through session recordings and
+              heatmaps.
             </li>
           </ul>
           <p>
@@ -118,8 +121,9 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>
               Service providers who process data on our behalf, such as our email delivery
-              provider, hosting and database providers, and Google (for analytics and tag
-              management), each acting under contractual obligations to protect your data;
+              provider, hosting and database providers, and Google and Microsoft (for
+              analytics, tag management, and session-recording tools), each acting under
+              contractual obligations to protect your data;
             </li>
             <li>
               Professional advisors, regulators, or authorities where required by UAE law or to
@@ -133,8 +137,8 @@ export default function PrivacyPolicyPage() {
 
           <h2>6. International Transfers</h2>
           <p>
-            Some of our service providers, including Google, may process data on servers
-            located outside the UAE. Where personal data is transferred outside the UAE, we
+            Some of our service providers, including Google and Microsoft, may process data on
+            servers located outside the UAE. Where personal data is transferred outside the UAE, we
             take reasonable steps to ensure such transfers are subject to appropriate
             safeguards consistent with the PDPL, including reliance on providers that maintain
             recognised international data protection standards.
@@ -146,7 +150,7 @@ export default function PrivacyPolicyPage() {
             necessary to respond to your enquiry, maintain our client relationship, and meet
             our legal, accounting, or reporting obligations, after which it is securely deleted
             or anonymised. Analytics data is retained in accordance with Google Analytics&apos;
-            standard retention settings.
+            and Microsoft Clarity&apos;s standard retention settings.
           </p>
 
           <h2>8. Your Rights</h2>
