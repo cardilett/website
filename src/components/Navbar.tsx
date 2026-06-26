@@ -127,7 +127,7 @@ export default function Navbar() {
       <header className={navClass} id="nav">
         <div className="nav__inner">
           <Link href="/" className="nav__brand" aria-label="Cardilett home">
-            <img src="/img/logo-combined.png" alt="Cardilett" className="nav__brand-logo" />
+            <img src="/img/cardilett-logo.png" alt="Cardilett" className="nav__brand-logo" />
           </Link>
 
           <nav className="nav__menu" aria-label="Primary">

@@ -286,7 +286,7 @@ em {
 }
 
 .nav__brand-logo {
-  height: 46px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   transition: transform .3s var(--ease);
