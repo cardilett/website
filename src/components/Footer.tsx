@@ -72,7 +72,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>Abu Dhabi, United Arab Emirates</li>
-              <li>Sun–Thu · 08:00–16:00 UAE time</li>
+              <li>Mon-Fri · 08:00–16:00 UAE time</li>
             </ul>
           </div>
         </div>
