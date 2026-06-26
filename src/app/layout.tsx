@@ -38,7 +38,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
-      <GoogleTagManager gtmId="GTM-KT6J7WNS" />
+      <GoogleTagManager gtmId="GTM-WB8Z5WH6" />
       <GoogleAnalytics gaId="G-B134EYVR2K" />
       <body suppressHydrationWarning>
         {/* Google Consent Mode v2 default — a plain inline script (not
@@ -68,7 +68,7 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KT6J7WNS"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WB8Z5WH6"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}

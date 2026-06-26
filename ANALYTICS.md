@@ -5,7 +5,7 @@ The goal: see **which pages and which sections get the most views**.
 ## What the site already does
 
 - **Google Tag Manager** is loaded site-wide from the root layout
-  (`src/app/layout.tsx`, container `GTM-KT6J7WNS`).
+  (`src/app/layout.tsx`, container `GTM-WB8Z5WH6`).
 - **`src/components/Analytics.tsx`** pushes a **`section_view`** event to the
   GTM `dataLayer` the first time each section scrolls into view, with:
   - `section_id` — e.g. `methodology`, `about`, `services`
@@ -25,7 +25,7 @@ You need a GA4 property; then connect it through the existing GTM container.
    browser history events"** — this captures page views for our single-page
    (App Router) navigations. → gives you **page popularity** in
    *Reports → Engagement → Pages and screens*.
-3. **GTM** (container `GTM-KT6J7WNS`):
+3. **GTM** (container `GTM-WB8Z5WH6`):
    - Tag: **Google Analytics: GA4 Configuration** with your Measurement ID,
      firing on **All Pages**.
    - Variables: create **Data Layer Variables** for `section_id`,
