@@ -29,15 +29,13 @@ export default function Hero() {
 
       <div className="hero__inner">
         <h1 className="hero__title">
-          <span className="reveal">Essential HR.</span>
-          <span className="reveal">
-            <em>Decisive</em> impact.
-          </span>
+          <span className="reveal">Shaping Better Organization</span>
+          <span className="reveal">Begins Here.</span>
         </h1>
 
         <p className="hero__lede reveal">
-          We’re a government-enabled, Emirati-led consultancy — pairing Big&nbsp;4 rigor with
-          regional agility, real UAE market insight, and a steady hand on national direction.
+          Partnering with employers, employees, and government entities to build better
+          organizations — and a stronger UAE.
         </p>
 
         <div className="hero__actions reveal">

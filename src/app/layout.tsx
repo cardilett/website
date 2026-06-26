@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cardilett — Essential HR. Decisive Impact.',
+    default: 'Cardilett — Shaping Better Organization. Begins Here.',
     template: '%s — Cardilett',
   },
   description:

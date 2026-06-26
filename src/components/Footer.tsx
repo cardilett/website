@@ -4,7 +4,7 @@ const EXPLORE = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'Who We Are' },
   { href: '/services', label: 'What We Do' },
-  { href: '/work', label: 'Our Impact' },
+  { href: '/work', label: 'How We Did' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -26,7 +26,7 @@ export default function Footer() {
           <Link href="/" className="foot__mark" aria-label="Cardilett home">
             <img src="/img/logo-combined.png" alt="Cardilett" className="foot__logo" />
           </Link>
-          <p>Essential HR. Decisive impact.</p>
+          <p>Shaping Better Organization. Begins Here.</p>
           <p className="foot__fine">
             A government-enabled, Emirati-led HR consultancy — Big&nbsp;4 rigor, regional agility.
           </p>
