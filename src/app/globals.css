@@ -448,6 +448,10 @@ em {
     flex-shrink: 0;
   }
 
+  .nav__brand-logo {
+    height: 59px;
+  }
+
   .nav.is-open .nav__drawer {
     display: flex;
     flex-direction: column;
