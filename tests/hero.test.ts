@@ -6,7 +6,7 @@ const hero = readSrc('src/components/Hero.tsx');
 // The five stat boxes Hayat specified, in order. Labels in source carry an
 // explicit "\n" line break; we match on the visible words, ignoring that break.
 const EXPECTED_STATS = [
-  { num: '100', suffix: '%', label: 'Emirati-owned & led company' },
+  { num: '100', suffix: '%', label: 'Emirati-Owned & led company' },
   { num: '20', suffix: '+', label: 'Years of experience' },
   { num: '10', suffix: '+', label: 'Industries served across the globe' },
   { num: '100 to 20k', suffix: '+', label: 'Workforce-size management' },

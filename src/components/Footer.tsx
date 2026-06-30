@@ -81,7 +81,7 @@ export default function Footer() {
       <div className="foot__bottom">
         <span>© {YEAR} Cardilett HR Advisory and Consultancy. All rights reserved.</span>
         <Link href="/privacy-policy">Privacy Policy</Link>
-        <span>100% Emirati-owned · Abu Dhabi, UAE</span>
+        <span>100% Emirati-Owned & led company  · Abu Dhabi, UAE</span>
       </div>
     </footer>
   );
