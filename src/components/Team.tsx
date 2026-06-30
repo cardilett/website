@@ -16,7 +16,7 @@ export default function Team() {
     <section className="team" data-theme="apricot" id="team">
       <div className="section__head section__head--centered">
         <h2 className="section__title reveal">
-          Senior-led. <em>Locally rooted.</em>
+          UAE Leadership for Global HR Excellence
         </h2>
       </div>
 

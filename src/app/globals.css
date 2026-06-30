@@ -826,13 +826,11 @@ main>section:first-child:not(.hero) {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(20, 22, 38, 0.94) 0%,
-    rgba(20, 22, 38, 0.8) 42%,
-    rgba(20, 22, 38, 0.35) 58%,
-    transparent 78%
-  );
+  background: linear-gradient(90deg,
+      rgba(20, 22, 38, 0.94) 0%,
+      rgba(20, 22, 38, 0.8) 42%,
+      rgba(20, 22, 38, 0.35) 58%,
+      transparent 78%);
   pointer-events: none;
   z-index: 0;
 }
@@ -956,9 +954,7 @@ main>section:first-child:not(.hero) {
 .hero__trust {
   margin-top: clamp(20px, 3vh, 36px);
   display: grid;
-  /* Equal-width boxes; the bar shrinks to fit them rather than spanning
-     the full hero width */
-  grid-template-columns: repeat(5, minmax(0, 176px));
+  grid-template-columns: repeat(5, minmax(0, 150px));
   width: fit-content;
   max-width: 100%;
   gap: 0;
@@ -974,8 +970,10 @@ main>section:first-child:not(.hero) {
 .hero__trust-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 5px;
-  padding: 1px 16px;
+  padding: 1px 12px;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -1076,18 +1074,18 @@ main>section:first-child:not(.hero) {
     padding-top: clamp(140px, 38vh, 360px);
     padding-bottom: clamp(40px, 7vh, 72px);
   }
+
   .hero__bg img {
     object-position: 60% top;
   }
+
   .hero::before {
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 30%,
-      rgba(20, 22, 38, 0.35) 48%,
-      rgba(20, 22, 38, 0.82) 70%,
-      rgba(20, 22, 38, 0.92) 100%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        transparent 30%,
+        rgba(20, 22, 38, 0.35) 48%,
+        rgba(20, 22, 38, 0.82) 70%,
+        rgba(20, 22, 38, 0.92) 100%);
   }
 }
 
@@ -1213,7 +1211,11 @@ main>section:first-child:not(.hero) {
 /* -----------------------  ABOUT  ----------------------- */
 /* Team and every other section now share one symmetric rhythm via --section-pad;
    no per-section padding overrides so every seam is identical. */
-/* Founder grid is empty for now drop the card's trailing margin */
+.team .section__title {
+  font-size: clamp(26px, 3.2vw, 44px);
+  max-width: 30ch;
+}
+
 .team .founder {
   margin-bottom: 0;
 }
@@ -1597,12 +1599,29 @@ main>section:first-child:not(.hero) {
   transform: translateY(-4px);
 }
 
-.step:nth-of-type(1) { padding-top: 150px; }
-.step:nth-of-type(2) { padding-top: 112px; }
-.step:nth-of-type(3) { padding-top: 78px; }
-.step:nth-of-type(4) { padding-top: 52px; }
-.step:nth-of-type(5) { padding-top: 26px; }
-.step:nth-of-type(6) { padding-top: 4px; }
+.step:nth-of-type(1) {
+  padding-top: 150px;
+}
+
+.step:nth-of-type(2) {
+  padding-top: 112px;
+}
+
+.step:nth-of-type(3) {
+  padding-top: 78px;
+}
+
+.step:nth-of-type(4) {
+  padding-top: 52px;
+}
+
+.step:nth-of-type(5) {
+  padding-top: 26px;
+}
+
+.step:nth-of-type(6) {
+  padding-top: 4px;
+}
 
 .step__num {
   font-size: 13px;
@@ -2186,8 +2205,13 @@ a.ceo-connect__link:hover {
 }
 
 @keyframes consult-fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .consult-modal {
@@ -2203,8 +2227,15 @@ a.ceo-connect__link:hover {
 }
 
 @keyframes consult-rise {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .consult-modal__close {
