@@ -1,7 +1,7 @@
 import SectionCTA from '@/components/SectionCTA';
 
 // ---------------------------------------------------------------------------
-// "Who We Serve" — the twelve sectors clustered into five compact groups.
+// "Who We Serve" the twelve sectors clustered into five compact groups.
 // Kept deliberately short: plain text under a small icon, no heavy boxes,
 // since these are descriptive (not links).
 // ---------------------------------------------------------------------------
@@ -65,7 +65,7 @@ export default function Industries() {
         <span className="eyebrow reveal">Who We Serve</span>
         <h2 className="section__title reveal">Trusted across every sector that shapes the UAE.</h2>
         <p className="section__sub reveal">
-          SMEs, enterprises, family businesses, and government entities — grouped by the markets we
+          SMEs, enterprises, family businesses, and government entities grouped by the markets we
           know best.
         </p>
       </div>

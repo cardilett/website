@@ -1,4 +1,4 @@
-import SectionCTA from '@/components/SectionCTA';
+import CeoConnect from '@/components/CeoConnect';
 
 interface Member {
   name: string;
@@ -7,14 +7,14 @@ interface Member {
   bio: string;
 }
 
-// Team member data removed — only the founder is shown for now.
+// Team member data removed only the founder is shown for now.
 // Structure preserved: add entries here to re-populate the team grid.
 const MEMBERS: Member[] = [];
 
 export default function Team() {
   return (
-    <section className="team" data-theme="sand" id="team">
-      <div className="section__head">
+    <section className="team" data-theme="apricot" id="team">
+      <div className="section__head section__head--centered">
         <h2 className="section__title reveal">
           Senior-led. <em>Locally rooted.</em>
         </h2>
@@ -31,7 +31,7 @@ export default function Team() {
             custodian of its standards.
           </p>
           <p>
-            With deep expertise in HR strategy, organisational design, and total rewards — Hayat
+            With deep expertise in HR strategy, organisational design, and total rewards Hayat
             brings the rigour of a Big&nbsp;4 partner and the agility of a regional leader to every
             engagement.
           </p>
@@ -57,7 +57,8 @@ export default function Team() {
         ))}
       </div>
 
-      <SectionCTA />
+      {/* CEO-section CTA only: centered, reveals contact details on click. */}
+      <CeoConnect />
     </section>
   );
 }

@@ -26,8 +26,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cardilett — Shaping Better Organization. Begins Here.',
-    template: '%s — Cardilett',
+    default: 'Cardilett Shaping Better Organization. Begins Here.',
+    template: '%s Cardilett',
   },
   description:
     'Cardilett is a UAE-based, Emirati-led HR consultancy delivering Big 4 rigor with regional agility. Redefining HR through Innovation, Integration, and Impact.',
@@ -41,7 +41,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-WB8Z5WH6" />
       <GoogleAnalytics gaId="G-B134EYVR2K" />
       <body suppressHydrationWarning>
-        {/* Google Consent Mode v2 default — a plain inline script (not
+        {/* Google Consent Mode v2 default a plain inline script (not
             next/script) so React 19 renders it in place and the browser runs it
             during HTML parse, before GTM loads. Tags start denied and wait for
             the CookieScript banner's consent update. */}

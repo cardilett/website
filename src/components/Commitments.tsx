@@ -4,7 +4,7 @@ const PILLARS = [
   {
     num: '01',
     title: 'Strengthen your in-house capability.',
-    body: 'We equip your team with the skills, tools, and practical know-how to execute with confidence — and reduce dependency on external support.',
+    body: 'We equip your team with the skills, tools, and practical know-how to execute with confidence and reduce dependency on external support.',
   },
   {
     num: '02',
@@ -14,7 +14,7 @@ const PILLARS = [
   {
     num: '03',
     title: 'Create lasting value beyond our work.',
-    body: 'We support the growth of people, institutions, and the broader community — in alignment with UAE national development priorities.',
+    body: 'We support the growth of people, institutions, and the broader community in alignment with UAE national development priorities.',
   },
 ];
 
@@ -25,7 +25,7 @@ export default function Commitments() {
         <img src="/img/team-office.jpg" alt="" className="parallax-img" />
       </div>
 
-      <div className="section__head">
+      <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Our Commitments</span>
         <h2 className="section__title reveal">
           Three promises we make on <em>every</em> engagement.

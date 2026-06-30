@@ -15,16 +15,16 @@ function Arrow() {
 }
 
 /**
- * Site-wide action pair: crimson "Contact Us" (CTA) + gold "Explore our services".
+ * Site-wide action pair: crimson "Contact us" (CTA) + gold "Explore our services".
  *
- * Dropped at the end of each major section so placement can be curated later —
+ * Dropped at the end of each major section so placement can be curated later
  * to remove it from a section, delete that section's single <SectionCTA /> line.
  */
 export default function SectionCTA() {
   return (
     <div className="section-cta reveal">
       <Link href="/contact" className="btn btn--primary">
-        Contact Us
+        Contact us
         <Arrow />
       </Link>
       <Link href="/services" className="btn btn--gold">

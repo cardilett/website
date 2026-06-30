@@ -83,6 +83,7 @@ export default function Contact() {
   const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [reference, setReference] = useState('');
 
   const busy = status === 'submitting';
   const done = status === 'success';
@@ -111,6 +112,7 @@ export default function Contact() {
 
       if (!res.ok) throw new Error(json.error ?? 'Something went wrong.');
 
+      if (json.reference) setReference(json.reference);
       setStatus('success');
     } catch (err) {
       setErrorMsg(
@@ -127,7 +129,7 @@ export default function Contact() {
       </div>
 
       <div className="contact__grid">
-        {/* ---- Left column — static info ---- */}
+        {/* ---- Left column static info ---- */}
         <div className="contact__left">
           <span className="eyebrow reveal">Let&apos;s talk</span>
           <h2 className="section__title reveal">
@@ -135,7 +137,7 @@ export default function Contact() {
           </h2>
           <p className="contact__lede reveal">
             Tell us what you&apos;re solving for. A senior member of our team will come back
-            within one business day — confidentiality assumed, always.
+            within one business day confidentiality assumed, always.
           </p>
 
           <div className="contact__meta reveal">
@@ -162,8 +164,13 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* ---- Right column — form ---- */}
-        <form className="contact__form reveal" onSubmit={handleSubmit} noValidate>
+        {/* ---- Right column form ---- */}
+        {/* On success the whole panel turns teal to confirm the request landed. */}
+        <form
+          className={`contact__form reveal${done ? ' contact__form--teal' : ''}`}
+          onSubmit={handleSubmit}
+          noValidate
+        >
           <div className="field">
             <label htmlFor="c-name">Name</label>
             <input
@@ -275,9 +282,14 @@ export default function Contact() {
           </button>
 
           {done && (
-            <p className="contact__success">
-              Thank you. Your message is with our team — we&apos;ll respond within one business
-              day.
+            <p className="contact__success contact__success--teal">
+              Your request has been submitted successfully, and we will be in touch with you
+              within 2 business working days.
+              {reference && (
+                <span className="contact__success-ref">
+                  Your reference number: <strong>{reference}</strong>
+                </span>
+              )}
             </p>
           )}
 

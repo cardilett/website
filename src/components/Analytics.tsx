@@ -9,7 +9,7 @@ import { sendGTMEvent } from '@next/third-parties/google';
  *
  * Page views are already captured by GA4 Enhanced Measurement (which tracks
  * browser-history changes, including App Router client navigations), so we do
- * NOT emit a custom page_view here — that would double-count.
+ * NOT emit a custom page_view here that would double-count.
  *
  * What GA4 can't do on its own is tell you which *section* of a page people
  * actually reached. This reports a `section_view` to the GTM dataLayer the

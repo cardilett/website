@@ -28,7 +28,7 @@ export default function CTASection({
       Ready to make HR your <em>advantage?</em>
     </>
   ),
-  sub = 'Book a consultation and a senior member of our team will come back within one business day — confidentiality assumed, always.',
+  sub = 'Book a consultation and a senior member of our team will come back within one business day confidentiality assumed, always.',
 }: Props) {
   return (
     <section className="cta" data-theme="crimson">
@@ -38,7 +38,7 @@ export default function CTASection({
         <p className="cta__sub reveal">{sub}</p>
         <div className="cta__actions reveal">
           <Link href="/contact" className="btn btn--light">
-            Contact Us
+            Contact us
             <Arrow />
           </Link>
           <Link href="/services" className="btn btn--gold">

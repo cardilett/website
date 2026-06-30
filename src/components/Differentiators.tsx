@@ -10,7 +10,7 @@ interface Diff {
 const DIFFS: Diff[] = [
   {
     title: 'ROI & Measurable Outcomes',
-    body: 'Every engagement ties to a number the business recognises — cost saved, time reclaimed, risk averted.',
+    body: 'Every engagement ties to a number the business recognises cost saved, time reclaimed, risk averted.',
     icon: (
       <path
         d="M3 20h18M5 20V11l7-6 7 6v9M9 20v-6h6v6"
@@ -23,7 +23,7 @@ const DIFFS: Diff[] = [
   },
   {
     title: 'Benchmark-Driven Recommendations',
-    body: 'Decisions grounded in regional and global benchmarks — never generic, never guessed.',
+    body: 'Decisions grounded in regional and global benchmarks never generic, never guessed.',
     icon: (
       <path
         d="M4 20V6m0 14h16M8 20V10m4 10V7m4 13v-9m4 9v-5"
@@ -64,7 +64,7 @@ const DIFFS: Diff[] = [
   },
   {
     title: 'Fast Turnaround, High Governance',
-    body: 'The speed of a boutique with the governance of a Big 4 — no compromise on either side.',
+    body: 'The speed of a boutique with the governance of a Big 4 no compromise on either side.',
     icon: (
       <path
         d="M12 2v4m0 12v4M2 12h4m12 0h4M5.6 5.6l2.8 2.8m7.2 7.2 2.8 2.8M5.6 18.4l2.8-2.8m7.2-7.2 2.8-2.8"
@@ -76,7 +76,7 @@ const DIFFS: Diff[] = [
   },
   {
     title: 'Emirati Leadership, Global Standards',
-    body: 'Local context where it counts, international standards where they matter — both, always.',
+    body: 'Local context where it counts, international standards where they matter both, always.',
     icon: (
       <path
         d="M12 3l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 21l1.2-6.5L2.5 9.9l6.6-.9L12 3Z"
@@ -95,13 +95,13 @@ export default function Differentiators() {
         <img src="/img/uae-burj-al-arab.jpg" alt="" className="parallax-img" loading="lazy" decoding="async" />
       </div>
 
-      <div className="section__head">
+      <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Why Cardilett</span>
         <h2 className="section__title reveal">
-          Authority and agility — <em>held in equal measure.</em>
+          Authority and agility <em>held in equal measure.</em>
         </h2>
         <p className="section__sub reveal">
-          The reasons clients bring us in — and the reasons they keep us close.
+          The reasons clients bring us in and the reasons they keep us close.
         </p>
       </div>
 

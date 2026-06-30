@@ -28,7 +28,7 @@ export default function Footer() {
           </Link>
           <p>Shaping Better Organization. Begins Here.</p>
           <p className="foot__fine">
-            A government-enabled, Emirati-led HR consultancy — Big&nbsp;4 rigor, regional agility.
+            A government-enabled, Emirati-led HR consultancy Big&nbsp;4 rigor, regional agility.
           </p>
         </div>
 

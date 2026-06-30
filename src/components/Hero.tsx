@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
+// Labels carry an explicit line break so every box reads as a tidy two
+// lines (CSS white-space: pre-line honours the \n).
 const TRUST = [
-  { num: '100', suffix: '%', label: 'Emirati-owned & led' },
-  { num: '13', suffix: '', label: 'Core HR service areas' },
-  { num: '12', suffix: '+', label: 'Sectors served across the UAE' },
-  { num: '98', suffix: '%', label: 'HR Audit findings closed' },
-  { num: '300', suffix: '+', label: 'Roles re-graded' },
-  { num: '2.4', suffix: '×', label: 'Engagement uplift' },
-  { num: '40', suffix: '%', label: 'Time-to-decision reduced' },
+  { num: '100', suffix: '%', label: 'Emirati-owned &\nled company' },
+  { num: '20', suffix: '+', label: 'Years of\nexperience' },
+  { num: '10', suffix: '+', label: 'Industries served\nacross the globe' },
+  { num: '100 to 20k', suffix: '+', label: 'Workforce-size\nmanagement' },
+  { num: '15', suffix: '+', label: 'Countries labour\nlaw expertise' },
 ];
 
 export default function Hero() {
@@ -34,13 +34,13 @@ export default function Hero() {
         </h1>
 
         <p className="hero__lede reveal">
-          Partnering with employers, employees, and government entities to build better
-          organizations — and a stronger UAE.
+          Partnering with government entities, organizations and employees towards overall
+          enhancement, progression and prosperity in alignment with the UAE’s vision.
         </p>
 
         <div className="hero__actions reveal">
           <Link href="/contact" className="btn btn--primary">
-            Contact Us
+            Contact us
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path
                 d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"

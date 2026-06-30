@@ -1,5 +1,5 @@
 /* ============================================================
-   Cardilett — Shaping Better Organization. Begins Here.
+   Cardilett Shaping Better Organization. Begins Here.
    Redesign: airy, editorial, multi-page layout language
    (inspired by pinkcamel.ae) on Cardilett's own crimson brand.
    Brand: Deep Crimson · Emirati Gold · Desert Sand · Gulf Teal ·
@@ -36,7 +36,7 @@
   --indigo-deep: #1C1C2A;
   --indigo-soft: #3E3E55;
 
-  /* Surfaces & text — lighter, airier base */
+  /* Surfaces & text lighter, airier base */
   --paper: #FFFFFF;
   --bg: #FBF8F3;
   --text: #232030;
@@ -67,7 +67,7 @@
   --ease: cubic-bezier(.2, .7, .1, 1);
   --ease-out: cubic-bezier(.16, 1, .3, 1);
 
-  /* Layout — more generous whitespace */
+  /* Layout more generous whitespace */
   --max: 1200px;
   --max-wide: 1320px;
   --gutter: clamp(22px, 5vw, 64px);
@@ -248,23 +248,19 @@ em {
   left: 0;
   right: 0;
   z-index: 50;
-  backdrop-filter: saturate(1.3) blur(14px);
-  -webkit-backdrop-filter: saturate(1.3) blur(14px);
-  background: rgba(251, 248, 243, 0.72);
+  background: rgb(251, 248, 243);
   border-bottom: 1px solid transparent;
   transition: background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease);
 }
 
 .nav.is-scrolled {
-  background: rgba(251, 248, 243, 0.88);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  background: rgb(251, 248, 243);
   border-bottom-color: var(--hairline);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .nav.is-dark {
-  background: rgba(28, 28, 42, 0.7);
+  background: rgb(28, 28, 42);
   color: var(--sand);
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
@@ -286,7 +282,7 @@ em {
 }
 
 .nav__brand-logo {
-  height: 90px;
+  height: 56px;
   width: auto;
   object-fit: contain;
   transition: transform .3s var(--ease);
@@ -449,7 +445,7 @@ em {
   }
 
   .nav__brand-logo {
-    height: 59px;
+    height: 38px;
   }
 
   .nav.is-open .nav__drawer {
@@ -457,7 +453,7 @@ em {
     flex-direction: column;
   }
 
-  /* Open drawer always uses the light panel — force readable dark text,
+  /* Open drawer always uses the light panel force readable dark text,
      even when the nav is in dark-theme (is-dark) mode */
   .nav.is-open {
     background: var(--bg);
@@ -530,6 +526,12 @@ main>section:first-child:not(.hero) {
   color: var(--sand);
 }
 
+/* Apricot opens the Founder & CEO section as its own distinct band. */
+[data-theme="apricot"] {
+  background: #F8E1C8;
+  color: var(--text);
+}
+
 .section__head {
   max-width: var(--max);
   margin: 0 auto clamp(24px, 3vw, 40px);
@@ -562,7 +564,7 @@ main>section:first-child:not(.hero) {
   opacity: 0.14;
 }
 
-/* Eyebrow — small uppercase kicker (was a 38pt bug) */
+/* Eyebrow small uppercase kicker (was a 38pt bug) */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -602,7 +604,7 @@ main>section:first-child:not(.hero) {
   color: var(--crimson);
 }
 
-/* Section titles — large, confident, editorial */
+/* Section titles large, confident, editorial */
 .section__title {
   font-size: clamp(30px, 4.4vw, 58px);
   line-height: 1.04;
@@ -713,7 +715,7 @@ main>section:first-child:not(.hero) {
   border-color: var(--sand);
 }
 
-/* Light button — for use on crimson / dark bands */
+/* Light button for use on crimson / dark bands */
 .btn--light {
   background: var(--sand);
   color: var(--crimson);
@@ -727,7 +729,7 @@ main>section:first-child:not(.hero) {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 16px 34px rgba(0, 0, 0, 0.22);
 }
 
-/* Gold button — site-wide "Explore our services" CTA.
+/* Gold button site-wide "Explore our services" CTA.
    Solid golden fill with a high-contrast deep-crimson label (~6.8:1). */
 .btn--gold {
   background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 100%);
@@ -742,6 +744,22 @@ main>section:first-child:not(.hero) {
   color: var(--crimson-deep);
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18), 0 16px 34px rgba(176, 141, 60, 0.36);
+}
+
+/* Teal button "Book your free consultation" CTA. */
+.btn--teal {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+  color: #FFFFFF;
+  font-weight: 660;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.14), 0 10px 28px rgba(58, 128, 127, 0.30);
+}
+
+.btn--teal:hover {
+  background: linear-gradient(135deg, #57AAA8 0%, #2F6F6E 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18), 0 16px 34px rgba(58, 128, 127, 0.36);
 }
 
 .btn--block {
@@ -858,7 +876,7 @@ main>section:first-child:not(.hero) {
 }
 
 .hero__inner>.hero__trust {
-  max-width: clamp(540px, 56vw, 860px);
+  max-width: 100%;
 }
 
 .hero__eyebrow {
@@ -919,6 +937,8 @@ main>section:first-child:not(.hero) {
   color: rgba(251, 237, 221, 0.92);
   text-shadow: 0 1px 12px rgba(12, 13, 24, 0.55);
   margin-bottom: clamp(18px, 2.6vh, 28px);
+  /* Widen the measure so the lede settles into two lines on desktop */
+  max-width: clamp(380px, 39vw, 680px);
 }
 
 .hero__actions {
@@ -936,10 +956,14 @@ main>section:first-child:not(.hero) {
 .hero__trust {
   margin-top: clamp(20px, 3vh, 36px);
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  /* Equal-width boxes; the bar shrinks to fit them rather than spanning
+     the full hero width */
+  grid-template-columns: repeat(5, minmax(0, 176px));
+  width: fit-content;
+  max-width: 100%;
   gap: 0;
-  align-items: start;
-  background: rgba(12, 13, 24, 0.55);
+  align-items: stretch;
+  background: rgba(12, 13, 24, 0.58);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -950,8 +974,8 @@ main>section:first-child:not(.hero) {
 .hero__trust-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 0 12px;
+  gap: 5px;
+  padding: 1px 16px;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -960,11 +984,12 @@ main>section:first-child:not(.hero) {
 }
 
 .hero__trust-num {
-  font-size: clamp(19px, 1.75vw, 24px);
+  font-size: clamp(19px, 1.55vw, 23px);
   font-weight: 780;
   letter-spacing: -0.02em;
   line-height: 1;
   color: var(--sand);
+  white-space: nowrap;
 }
 
 .hero__trust-num span {
@@ -972,23 +997,40 @@ main>section:first-child:not(.hero) {
   font-style: italic;
   font-weight: 400;
   color: inherit;
-  font-size: 0.78em;
-  margin-left: 5px;
+  font-size: 0.7em;
+  margin-left: 3px;
 }
 
 .hero__trust-label {
+  /* Pinned to the bottom so labels align across the row regardless of
+     number or label height */
+  margin-top: auto;
   font-size: 11px;
-  color: rgba(251, 237, 221, 0.6);
+  color: rgba(251, 237, 221, 0.82);
   line-height: 1.25;
+  /* Honour the explicit \n line breaks set in the label data so every
+     box is a consistent two lines */
+  white-space: pre-line;
 }
 
 @media (max-width: 900px) {
   .hero__trust {
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    row-gap: 18px;
   }
 
-  .hero__trust-item:nth-child(4n) {
+  /* Reset all separators, then redraw only within each 3-col row */
+  .hero__trust-item {
+    border-right: none;
+  }
+
+  .hero__trust-item:nth-child(3n+1),
+  .hero__trust-item:nth-child(3n+2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .hero__trust-item:last-child {
     border-right: none;
   }
 }
@@ -996,20 +1038,35 @@ main>section:first-child:not(.hero) {
 @media (max-width: 600px) {
   .hero__trust {
     grid-template-columns: 1fr 1fr;
-    row-gap: 12px;
+    width: 100%;
+    row-gap: 16px;
     margin-top: clamp(24px, 6vw, 36px);
+    padding: 18px 0;
   }
 
-  .hero__trust-item:nth-child(2n) {
+  .hero__trust-item {
     border-right: none;
   }
 
+  .hero__trust-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .hero__trust-item:last-child {
+    border-right: none;
+  }
+
+  .hero__trust-item {
+    padding: 2px 16px;
+  }
+
   .hero__trust-num {
-    font-size: clamp(21px, 6.25vw, 28px);
+    font-size: clamp(20px, 6vw, 27px);
+    white-space: normal;
   }
 
   .hero__trust-label {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   /* Mobile hero: portrait photo with people up top, content drops into
@@ -1156,7 +1213,7 @@ main>section:first-child:not(.hero) {
 /* -----------------------  ABOUT  ----------------------- */
 /* Team and every other section now share one symmetric rhythm via --section-pad;
    no per-section padding overrides so every seam is identical. */
-/* Founder grid is empty for now — drop the card's trailing margin */
+/* Founder grid is empty for now drop the card's trailing margin */
 .team .founder {
   margin-bottom: 0;
 }
@@ -1377,7 +1434,7 @@ main>section:first-child:not(.hero) {
   justify-content: center;
 }
 
-/* Home-page gateway — the red box links through to the full services page */
+/* Home-page gateway the red box links through to the full services page */
 .services__gateway {
   max-width: var(--max);
   margin: 0 auto;
@@ -2049,6 +2106,304 @@ main>section:first-child:not(.hero) {
   max-width: 50ch;
 }
 
+/* CEO-section CTA: centered button that reveals the CEO contact methods. */
+.ceo-connect {
+  max-width: var(--max);
+  margin: clamp(36px, 4vw, 56px) auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.ceo-connect .btn {
+  font-size: 13.5px;
+  padding: 12px 22px;
+}
+
+.ceo-connect__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ceo-connect__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 560;
+  transition: transform .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+}
+
+a.ceo-connect__link:hover {
+  transform: translateY(-2px);
+  border-color: var(--crimson);
+  color: var(--crimson);
+}
+
+.ceo-connect__link--muted {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* -----------------  CONSULTATION CTA + POPUP  ----------------- */
+.consult-cta {
+  max-width: var(--max);
+  margin: clamp(36px, 4vw, 56px) auto 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.consult-cta .btn {
+  font-size: 14px;
+  padding: 14px 26px;
+}
+
+.consult-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(16px, 5vh, 64px) 16px;
+  overflow-y: auto;
+  background: rgba(28, 28, 42, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: consult-fade .2s var(--ease);
+}
+
+@keyframes consult-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.consult-modal {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--r-lg);
+  padding: clamp(28px, 4vw, 44px);
+  background: linear-gradient(150deg, var(--teal) 0%, var(--teal-deep) 100%);
+  color: #FFFFFF;
+  box-shadow: 0 30px 70px rgba(28, 28, 42, 0.4);
+  animation: consult-rise .28s var(--ease-out);
+}
+
+@keyframes consult-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.consult-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background .2s var(--ease);
+}
+
+.consult-modal__close:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.consult-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.consult-field--full {
+  grid-column: 1 / -1;
+}
+
+.consult-field label,
+.consult-label {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.consult-field input[type="text"],
+.consult-field input[type="email"],
+.consult-field input[type="tel"],
+.consult-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #FFFFFF;
+  color: var(--text);
+  font: inherit;
+  font-size: 14.5px;
+}
+
+.consult-field textarea {
+  resize: vertical;
+}
+
+.consult-field input::placeholder,
+.consult-field textarea::placeholder {
+  color: rgba(35, 32, 48, 0.45);
+}
+
+.consult-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.consult-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: none;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.consult-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--crimson);
+}
+
+.consult-multiselect {
+  position: relative;
+}
+
+.consult-multiselect__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #FFFFFF;
+  color: var(--text);
+  font: inherit;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+
+.consult-multiselect__panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: #FFFFFF;
+  box-shadow: 0 16px 40px rgba(28, 28, 42, 0.28);
+}
+
+.consult-multiselect__panel .consult-check {
+  color: var(--text);
+}
+
+.consult-field--check {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.consult-field--check input {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--crimson);
+}
+
+.consult-field--check label {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.consult-submit {
+  margin-top: 20px;
+}
+
+.consult-error {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13.5px;
+}
+
+.consult-declaration {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.consult-success {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.consult-success h3 {
+  font-size: clamp(18px, 2.2vw, 23px);
+  line-height: 1.35;
+  font-weight: 680;
+  margin-bottom: 16px;
+}
+
+.consult-success__ref {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 560px) {
+  .consult-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .founder {
     grid-template-columns: 1fr;
@@ -2181,7 +2536,7 @@ main>section:first-child:not(.hero) {
   gap: clamp(18px, 2vw, 24px);
 }
 
-/* Column fragment — kept transform-free to avoid the CSS multicol + transform
+/* Column fragment kept transform-free to avoid the CSS multicol + transform
    repaint bug (cards would vanish on hover, e.g. in Safari). The visual box and
    all transforms live on the inner .quote__card instead. */
 .quote {
@@ -2392,7 +2747,7 @@ main>section:first-child:not(.hero) {
 }
 
 /* Grid items default to min-width:auto, which lets long tokens (e.g. the
-   email address) push the column wider than its track — overflowing the
+   email address) push the column wider than its track overflowing the
    section and getting clipped by .contact's overflow:hidden. Allow shrink. */
 .contact__left,
 .contact__form {
@@ -2564,6 +2919,24 @@ main>section:first-child:not(.hero) {
   font-size: 14.5px;
 }
 
+/* Whole form turns teal once the request is submitted. */
+.contact__form--teal {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
+}
+
+.contact__success--teal {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+}
+
+.contact__success-ref {
+  display: block;
+  margin-top: 8px;
+  font-size: 13.5px;
+  opacity: 0.92;
+}
+
 .contact__error {
   grid-column: 1 / -1;
   margin-top: 4px;
@@ -2589,7 +2962,7 @@ main>section:first-child:not(.hero) {
 /* Compact the form so it fits the phone viewport without clipping */
 @media (max-width: 600px) {
 
-  /* Contact is the first section here — trim the nav-clearing top padding */
+  /* Contact is the first section here trim the nav-clearing top padding */
   main>section.contact:first-child {
     padding-top: 92px;
   }

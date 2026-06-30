@@ -53,19 +53,19 @@ const STEPS: Step[] = [
 export default function Methodology() {
   return (
     <section className="method" id="methodology">
-      <div className="section__head">
+      <div className="section__head section__head--centered">
         <span className="eyebrow reveal">How We Work</span>
         <h2 className="section__title reveal">
           A disciplined path from <em>diagnosis</em> to <em>enablement</em>.
         </h2>
         <p className="section__sub reveal">
-          Our project engagement methodology — a six-step rhythm we tailor to advisory and retainer
+          Our project engagement methodology a six-step rhythm we tailor to advisory and retainer
           work.
         </p>
       </div>
 
       <div className="method__flow">
-        {/* Wave connector — x-coords are proportional (6 equal columns), y-coords in px matching step offsets */}
+        {/* Wave connector x-coords are proportional (6 equal columns), y-coords in px matching step offsets */}
         <svg
           className="method__wave"
           viewBox="0 0 1000 290"

@@ -33,7 +33,7 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
-  // Preloader — dismiss 500 ms after all assets load
+  // Preloader dismiss 500 ms after all assets load
   useEffect(() => {
     const dismiss = () => setTimeout(() => setPreloaderDone(true), 500);
     if (document.readyState === 'complete') {
@@ -143,7 +143,7 @@ export default function Navbar() {
           </nav>
 
           <Link href="/contact" className="nav__cta">
-            Contact Us
+            Contact us
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path
                 d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"
@@ -173,7 +173,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/contact" className="nav__drawer-cta">
-            Contact Us →
+            Contact us →
           </Link>
         </div>
       </header>

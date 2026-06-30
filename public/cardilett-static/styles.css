@@ -1,5 +1,5 @@
 /* ============================================================
-   Cardilett — Apple-inspired HR Consultancy Showcase
+   Cardilett Apple-inspired HR Consultancy Showcase
    Brand System: Deep Crimson, Desert Sand, Skylight Blue,
                  Gulf Teal, Sage Grey, Emirati Gold, Charcoal Indigo
 ============================================================ */
@@ -193,7 +193,7 @@ em {
   animation: halo 1.6s var(--ease-out) infinite;
 }
 
-/* preloader__word::after removed — wordmark is now an img */
+/* preloader__word::after removed wordmark is now an img */
 
 @keyframes underline {
   0% {
@@ -317,7 +317,7 @@ em {
   transition: transform .3s var(--ease);
 }
 
-/* nav__brand-wordmark::after removed — wordmark is now an img */
+/* nav__brand-wordmark::after removed wordmark is now an img */
 
 .nav__brand:hover .nav__brand-logo {
   transform: scale(1.08);

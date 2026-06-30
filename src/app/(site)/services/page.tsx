@@ -6,7 +6,7 @@ import CTASection from '@/components/CTASection';
 export const metadata: Metadata = {
   title: 'What We Do',
   description:
-    'Thirteen HR advisory practice areas — strategy, organization design, total rewards, talent, compliance and more — delivered with global rigor and regional nuance.',
+    'Thirteen HR advisory practice areas strategy, organization design, total rewards, talent, compliance and more delivered with global rigor and regional nuance.',
 };
 
 export default function ServicesPage() {
@@ -20,7 +20,7 @@ export default function ServicesPage() {
             Not sure where to <em>start?</em>
           </>
         }
-        sub="Tell us the outcome you’re after and we’ll point you to the right engagement model — advisory, project, or retainer."
+        sub="Tell us the outcome you’re after and we’ll point you to the right engagement model advisory, project, or retainer."
       />
     </main>
   );

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import SectionCTA from '@/components/SectionCTA';
+import ConsultationCTA from '@/components/ConsultationCTA';
 
 interface Service {
   num: string;
@@ -12,18 +12,18 @@ const SERVICES: Service[] = [
   {
     num: '01',
     title: 'HR Transformation & Tech Enablement',
-    body: 'From HRIS selection to digital workflows — modernising the function with technology that actually lands.',
+    body: 'From HRIS selection to digital workflows modernising the function with technology that actually lands.',
     featured: true,
   },
   {
     num: '02',
     title: 'HR Strategy & Operating Model',
-    body: 'Architect the blueprint — aligning your HR function to business ambition, governance, and market realities.',
+    body: 'Architect the blueprint aligning your HR function to business ambition, governance, and market realities.',
   },
   {
     num: '03',
     title: 'Organization Design & Workforce Planning',
-    body: 'Right-structure, right-size, right-skill — built for how your organisation actually creates value today and tomorrow.',
+    body: 'Right-structure, right-size, right-skill built for how your organisation actually creates value today and tomorrow.',
   },
   {
     num: '04',
@@ -33,47 +33,47 @@ const SERVICES: Service[] = [
   {
     num: '05',
     title: 'Employer & Employee Value Proposition',
-    body: 'A value proposition people can feel — from first contact to lasting tenure, externally magnetic, internally proven.',
+    body: 'A value proposition people can feel from first contact to lasting tenure, externally magnetic, internally proven.',
   },
   {
     num: '06',
     title: 'Performance Management & Analytics',
-    body: 'Measurement systems that drive accountability, objectivity, and outcomes — not just annual conversations.',
+    body: 'Measurement systems that drive accountability, objectivity, and outcomes not just annual conversations.',
   },
   {
     num: '07',
     title: 'Retention & People Engagement',
-    body: 'Engagement programs rooted in evidence — diagnostics, interventions, and feedback loops that move the numbers.',
+    body: 'Engagement programs rooted in evidence diagnostics, interventions, and feedback loops that move the numbers.',
   },
   {
     num: '08',
     title: 'Total Rewards, ROI & Budget Modeling',
-    body: 'Pay, benefits, recognition — designed as a coherent system, benchmarked locally, justified to the board.',
+    body: 'Pay, benefits, recognition designed as a coherent system, benchmarked locally, justified to the board.',
   },
   {
     num: '09',
     title: 'DEI Integrity Scheme',
-    body: 'Diversity, Equity & Inclusion with measurable outcomes — honoring Emiratisation priorities and global best practice.',
+    body: 'Diversity, Equity & Inclusion with measurable outcomes honoring Emiratisation priorities and global best practice.',
   },
   {
     num: '10',
     title: 'Culture & Wellbeing Transformation',
-    body: 'Intentional cultural design — a workplace that performs and a workforce that wants to stay.',
+    body: 'Intentional cultural design a workplace that performs and a workforce that wants to stay.',
   },
   {
     num: '11',
     title: 'Job Architecture Redesign',
-    body: 'Grading, job families, and role clarity — the structural bones that make pay, growth, and equity work.',
+    body: 'Grading, job families, and role clarity the structural bones that make pay, growth, and equity work.',
   },
   {
     num: '12',
     title: 'HR Policies, Employee Relations & Compliance',
-    body: 'Policy frameworks aligned to UAE Labour Law and MoHRE guidance — clear, defensible, and operationally sound.',
+    body: 'Policy frameworks aligned to UAE Labour Law and MoHRE guidance clear, defensible, and operationally sound.',
   },
   {
     num: '13',
     title: 'Learning & Leadership Development',
-    body: "Capability programs that build depth — designed to close today's gaps and prepare for tomorrow's mandates.",
+    body: "Capability programs that build depth designed to close today's gaps and prepare for tomorrow's mandates.",
   },
 ];
 
@@ -92,10 +92,10 @@ export default function Services({ preview = false }: ServicesProps) {
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">What We Do</span>
         <h2 className="section__title reveal">
-          A complete HR advisory stack — <em>everything but recruitment.</em>
+          A Human Resources bank of solutions <em>in consultancy and advisory.</em>
         </h2>
         <p className="section__sub reveal">
-          Thirteen practice areas, delivered with the rigor of a global firm and the nuance of a
+          Thirteen practice areas, delivered with the rigor of global best-practice and the nuance of a
           regional partner who knows the ground.
         </p>
       </div>
@@ -104,14 +104,16 @@ export default function Services({ preview = false }: ServicesProps) {
         <Link href="/services" className="services__gateway reveal">
           <div className="services__gateway-text">
             <span className="services__gateway-num">13 practice areas</span>
-            <h3>Explore our complete HR advisory stack</h3>
+            <h3>Explore our complete HR advisory and consultancy stack</h3>
             <p>
-              From HR transformation and strategy to total rewards and compliance — see every
-              service we offer.
+              Cardilett provides integrated advisory solutions, from specialized consulting
+              engagements to large-scale transformation programs which enable you to realize
+              strategic objectives and maintain competitive advantage. We serve as your dedicated
+              strategic partner throughout your organizational growth journey.
             </p>
           </div>
           <span className="services__gateway-cta">
-            Explore our services
+            Explore how we can help you
             <svg width="16" height="16" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path
                 d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"
@@ -138,7 +140,9 @@ export default function Services({ preview = false }: ServicesProps) {
         </div>
       )}
 
-      <SectionCTA />
+      {/* Under the crimson box (this section only): a single centered teal CTA
+          that opens the consultation request popup. */}
+      <ConsultationCTA />
     </section>
   );
 }

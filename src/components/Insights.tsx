@@ -8,7 +8,7 @@ interface Insight {
 
 const INSIGHTS: Insight[] = [
   {
-    title: 'From audit to advantage — turning findings into function design.',
+    title: 'From audit to advantage turning findings into function design.',
     meta: 'Essay · 6 min read',
   },
   {
@@ -16,7 +16,7 @@ const INSIGHTS: Insight[] = [
     meta: 'Article · 8 min read',
   },
   {
-    title: 'Emiratisation as strategy, not a quota — a framework for leaders.',
+    title: 'Emiratisation as strategy, not a quota a framework for leaders.',
     meta: 'Point of view · 5 min read',
   },
   {
@@ -34,7 +34,7 @@ export default function Insights() {
           Timely thinking on <em>HR in the UAE.</em>
         </h2>
         <p className="section__sub reveal">
-          A steady stream of LinkedIn essays, articles, and short videos — syndicated here as we
+          A steady stream of LinkedIn essays, articles, and short videos syndicated here as we
           publish.
         </p>
       </div>
