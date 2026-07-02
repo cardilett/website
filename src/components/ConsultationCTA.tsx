@@ -95,6 +95,7 @@ export default function ConsultationCTA() {
           need: subjects.join(', '),
           message,
           consent,
+          formType: 'consultation',
         }),
       });
       const json = await res.json();

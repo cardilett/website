@@ -12,6 +12,8 @@ interface ContactPayload {
   /** Optional fields from the consultation popup. */
   phone?: string;
   commMethod?: string;
+  /** Which form the submission came from. Defaults to the contact form. */
+  formType?: 'contact' | 'consultation';
 }
 
 export async function POST(req: NextRequest) {
@@ -31,7 +33,12 @@ export async function POST(req: NextRequest) {
     consent,
     phone = '',
     commMethod = '',
+    formType,
   } = body;
+
+  // Anything that isn't an explicit consultation is treated as a contact enquiry.
+  const isConsultation = formType === 'consultation';
+  const source = isConsultation ? 'consultation' : 'contact';
 
   // Server-side validation mirrors the client checks
   if (!name?.trim() || !email?.trim()) {
@@ -52,8 +59,8 @@ export async function POST(req: NextRequest) {
   try {
     const pool = getDbPool();
     await pool.execute(
-      'INSERT INTO contact_submissions (name, email, company, need, message, consent) VALUES (?, ?, ?, ?, ?, ?)',
-      [name, email, company, need, message, consent ? 1 : 0]
+      'INSERT INTO contact_submissions (name, email, company, need, message, consent, source) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [name, email, company, need, message, consent ? 1 : 0, source]
     );
   } catch (err) {
     console.error('[contact] Database insert failed:', err);
@@ -65,14 +72,14 @@ export async function POST(req: NextRequest) {
 
   // The submission is safely stored a failure here shouldn't fail the request.
   try {
-    await sendNotificationEmail({ name, email, company, need, message, reference, phone, commMethod });
+    await sendNotificationEmail({ name, email, company, need, message, reference, phone, commMethod, isConsultation });
   } catch (err) {
     console.error('[contact] Notification email failed:', err);
   }
 
   // Auto-reply to the requester with their reference number. Best-effort.
   try {
-    await sendConfirmationEmail({ name, email, need, message, reference, commMethod });
+    await sendConfirmationEmail({ name, email, need, message, reference, commMethod, isConsultation });
   } catch (err) {
     console.error('[contact] Confirmation email failed:', err);
   }
@@ -112,15 +119,20 @@ async function sendNotificationEmail(fields: {
   reference: string;
   phone?: string;
   commMethod?: string;
+  isConsultation?: boolean;
 }) {
-  const { name, email, company, need, message, reference, phone = '', commMethod = '' } = fields;
+  const { name, email, company, need, message, reference, phone = '', commMethod = '', isConsultation = false } = fields;
+
+  const subject = isConsultation
+    ? `New free consultation request ${reference} ${name}${company ? ` · ${company}` : ''}`
+    : `New enquiry ${reference} ${name}${company ? ` · ${company}` : ''}`;
 
   await createTransporter().sendMail({
     from: process.env.SMTP_FROM ?? 'Cardilett <contact@cardilett.com>',
     to: process.env.CONTACT_TO ?? 'connect@cardilett.ae',
     replyTo: email,
-    subject: `New enquiry ${reference} ${name}${company ? ` · ${company}` : ''}`,
-    html: buildEmailHtml({ name, email, company, need, message, reference, phone, commMethod }),
+    subject,
+    html: buildEmailHtml({ name, email, company, need, message, reference, phone, commMethod, isConsultation }),
   });
 }
 
@@ -134,14 +146,19 @@ async function sendConfirmationEmail(fields: {
   message: string;
   reference: string;
   commMethod?: string;
+  isConsultation?: boolean;
 }) {
-  const { name, email, need, message, reference, commMethod = '' } = fields;
+  const { name, email, need, message, reference, commMethod = '', isConsultation = false } = fields;
+
+  const subject = isConsultation
+    ? `We have received your free consultation request ${reference}`
+    : `We have received your request ${reference}`;
 
   await createTransporter().sendMail({
     from: process.env.SMTP_FROM ?? 'Cardilett <contact@cardilett.com>',
     to: email,
-    subject: `We have received your request ${reference}`,
-    html: buildConfirmationHtml({ name, need, message, reference, commMethod }),
+    subject,
+    html: buildConfirmationHtml({ name, need, message, reference, commMethod, isConsultation }),
   });
 }
 
@@ -162,8 +179,14 @@ function buildEmailHtml(fields: {
   reference: string;
   phone?: string;
   commMethod?: string;
+  isConsultation?: boolean;
 }) {
-  const { name, email, company, need, message, reference, phone = '', commMethod = '' } = fields;
+  const { name, email, company, need, message, reference, phone = '', commMethod = '', isConsultation = false } = fields;
+
+  const subtitle = isConsultation ? 'Free consultation request' : 'New enquiry from the website';
+  const badge = isConsultation
+    ? `<span style="display:inline-block;margin-bottom:10px;padding:5px 12px;background:#FBEDDD;color:#6F0707;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border-radius:999px;">Free consultation</span>`
+    : '';
 
   const rows: [string, string][] = [
     ['Reference', esc(reference)],
@@ -201,8 +224,9 @@ function buildEmailHtml(fields: {
 <body style="margin:0;padding:24px;background:#FBEDDD;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
   <div style="max-width:580px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(28,28,42,0.12);">
     <div style="background:linear-gradient(135deg,#8B0A0A 0%,#6F0707 100%);padding:28px 32px;">
+      ${badge}
       <p style="margin:0;color:#FBEDDD;font-size:22px;font-weight:800;letter-spacing:-0.04em;">Cardilett</p>
-      <p style="margin:6px 0 0;color:rgba(251,237,221,0.72);font-size:13px;">New enquiry from the website</p>
+      <p style="margin:6px 0 0;color:rgba(251,237,221,0.72);font-size:13px;">${subtitle}</p>
     </div>
     <div style="padding:32px;">
       <table style="width:100%;border-collapse:collapse;">${tableRows}</table>
@@ -226,8 +250,13 @@ function buildConfirmationHtml(fields: {
   message: string;
   reference: string;
   commMethod?: string;
+  isConsultation?: boolean;
 }) {
-  const { name, need, message, reference, commMethod = '' } = fields;
+  const { name, need, message, reference, commMethod = '', isConsultation = false } = fields;
+
+  const subtitle = isConsultation
+    ? 'Your free consultation request has been received'
+    : 'Your request has been received';
 
   const rows: [string, string][] = [
     ['Reference number', esc(reference)],
@@ -262,7 +291,7 @@ function buildConfirmationHtml(fields: {
   <div style="max-width:580px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(28,28,42,0.12);">
     <div style="background:linear-gradient(135deg,#4C9C9A 0%,#3A807F 100%);padding:28px 32px;">
       <p style="margin:0;color:#FFFFFF;font-size:22px;font-weight:800;letter-spacing:-0.04em;">Cardilett</p>
-      <p style="margin:6px 0 0;color:rgba(255,255,255,0.82);font-size:13px;">Your request has been received</p>
+      <p style="margin:6px 0 0;color:rgba(255,255,255,0.82);font-size:13px;">${subtitle}</p>
     </div>
     <div style="padding:32px;">
       <p style="margin:0 0 20px;font-size:15px;color:#2B2B3D;line-height:1.6;">
