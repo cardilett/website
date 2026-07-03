@@ -80,7 +80,7 @@ const DIFFS: Diff[] = [
     icon: (
       <>
         {/* Flagpole */}
-        <rect x="2" y="1.5" width="1.5" height="21" rx="0.75" fill="rgba(255,255,255,0.65)" />
+        <rect x="2" y="1.5" width="1.5" height="21" rx="0.75" fill="rgba(0,0,0,0.25)" />
         {/* Green top stripe */}
         <path d="M3.5,3.5 C9,1.5 15,5.5 22,3.5 L22,10 C15,12 9,8 3.5,10Z" fill="#009A44" />
         {/* White middle stripe */}

@@ -1864,8 +1864,9 @@ main>section:first-child:not(.hero) {
 .diff__ico {
   width: 54px;
   height: 54px;
-  color: #fff;
-  background: var(--crimson);
+  color: var(--crimson);
+  background: var(--sand);
+  border: 1.5px solid var(--crimson);
   border-radius: var(--r-sm);
   display: grid;
   place-items: center;
@@ -1874,7 +1875,7 @@ main>section:first-child:not(.hero) {
 }
 
 .diff__card:hover .diff__ico {
-  background: var(--crimson-deep);
+  background: var(--sand-dim);
   transform: scale(1.08);
 }
 
