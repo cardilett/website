@@ -26,14 +26,16 @@ export default function Team() {
           <span className="founder__tag">Founder &amp; CEO</span>
           <h3>Hayat Ali Al Hosani</h3>
           <p>
-            Emirati founder with board-level governance experience across UAE government,
-            semi-government, and multinational groups. Builder of the Cardilett practice and
-            custodian of its standards.
+            With over two decades of leadership across the UAE&apos;s public and private sectors,
+            Hayat Al Hosani has advised boards, CEOs, and executive teams on building resilient,
+            high-performing organizations. From labour law compliance and Emiratisation to
+            large-scale workforce transformation and leadership strategy, she brings a rare
+            combination of governance expertise, commercial understanding, and practical HR
+            leadership.
           </p>
           <p>
-            With deep expertise in HR strategy, organisational design, and total rewards Hayat
-            brings the rigour of a Big&nbsp;4 partner and the agility of a regional leader to every
-            engagement.
+            Today, through Cardilett, she partners with organizations to solve complex
+            people-agenda challenges and build workplaces positioned for sustainable growth.
           </p>
         </div>
         <div className="founder__photo" aria-hidden="true">
