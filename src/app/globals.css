@@ -1864,9 +1864,8 @@ main>section:first-child:not(.hero) {
 .diff__ico {
   width: 54px;
   height: 54px;
-  color: var(--crimson);
-  background: var(--sand);
-  border: 1.5px solid var(--crimson);
+  color: #fff;
+  background: var(--crimson);
   border-radius: var(--r-sm);
   display: grid;
   place-items: center;
@@ -1875,8 +1874,18 @@ main>section:first-child:not(.hero) {
 }
 
 .diff__card:hover .diff__ico {
-  background: var(--sand-dim);
+  background: var(--crimson-deep);
   transform: scale(1.08);
+}
+
+/* UAE flag card — sand background with crimson outline */
+.diff__card:last-child .diff__ico {
+  background: var(--sand);
+  border: 1.5px solid var(--crimson);
+}
+
+.diff__card:last-child:hover .diff__ico {
+  background: var(--sand-dim);
 }
 
 .diff__ico svg {
