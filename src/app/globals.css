@@ -1221,6 +1221,13 @@ main>section:first-child:not(.hero) {
   max-width: 30ch;
 }
 
+.team .section__title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--crimson);
+}
+
 .team .founder {
   margin-bottom: 0;
 }
