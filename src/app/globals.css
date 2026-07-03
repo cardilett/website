@@ -1406,6 +1406,14 @@ main>section:first-child:not(.hero) {
 }
 
 /* -----------------------  SERVICES  ----------------------- */
+
+/* Show the services background image in full colour at a visible opacity */
+.services .section__bg-img img {
+  opacity: 0.35;
+  filter: none;
+  object-position: center 70%;
+}
+
 .services__grid {
   max-width: var(--max);
   margin: 0 auto;
