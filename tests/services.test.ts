@@ -5,13 +5,13 @@ const services = readSrc('src/components/Services.tsx');
 const flat = services.replace(/\s+/g, ' ');
 
 describe('Services section heading (Hayat Part 1)', () => {
-  it('[#14] heading reads "A Human Resources bank of solutions" (not "A complete HR advisory stack")', () => {
-    expect(flat).toContain('A Human Resources bank of solutions');
+  it('[#14] heading reads "A Human Resources advisory and consultancy" (not "A complete HR advisory stack")', () => {
+    expect(flat).toContain('A Human Resources advisory and consultancy');
     expect(flat, 'old heading still present').not.toContain('A complete HR advisory stack');
   });
 
-  it('[#15] heading emphasis reads "in consultancy and advisory." (not "everything but recruitment.")', () => {
-    expect(flat).toContain('in consultancy and advisory.');
+  it('[#15] heading emphasis reads "bank of solutions" (not "everything but recruitment.")', () => {
+    expect(flat).toContain('bank of solutions');
     expect(flat, 'old emphasis still present').not.toContain('everything but recruitment.');
   });
 

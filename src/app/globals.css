@@ -1492,6 +1492,35 @@ main>section:first-child:not(.hero) {
   justify-content: center;
 }
 
+/* Full-page intro block - same crimson style as gateway but not a link */
+.services__intro {
+  max-width: var(--max);
+  margin: 0 auto clamp(40px, 5vw, 64px);
+  position: relative;
+  z-index: 1;
+  padding: clamp(36px, 4.5vw, 64px);
+  border-radius: var(--r-lg);
+  background: radial-gradient(ellipse at 20% 20%, var(--crimson-glow) 0%, var(--crimson) 55%, var(--crimson-deep) 100%);
+  color: var(--sand);
+  box-shadow: 0 20px 50px rgba(111, 7, 7, 0.20);
+}
+
+.services__intro h3 {
+  color: var(--sand);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 720;
+  margin: 10px 0 12px;
+}
+
+.services__intro p {
+  color: rgba(251, 237, 221, 0.82);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 72ch;
+}
+
 /* Home-page gateway the red box links through to the full services page */
 .services__gateway {
   max-width: var(--max);
@@ -1878,7 +1907,7 @@ main>section:first-child:not(.hero) {
   transform: scale(1.08);
 }
 
-/* UAE flag card — sand background with crimson outline */
+/* UAE flag card - sand background with crimson outline */
 .diff__card:last-child .diff__ico {
   background: var(--sand);
   border: 1.5px solid var(--crimson);
