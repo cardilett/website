@@ -24,7 +24,6 @@ export default function About() {
           */}
           <figure className="about__figure reveal" aria-hidden="true">
             <img src="/img/cardilett-about.jpeg" alt="" />
-            <figcaption>Rooted in Abu Dhabi. Reach across the UAE.</figcaption>
           </figure>
         </div>
 
