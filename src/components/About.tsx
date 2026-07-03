@@ -1,27 +1,28 @@
 import SectionCTA from '@/components/SectionCTA';
 
+// "We the UAE 2031" pillars shown as pills under the About copy.
+const VISION_PILLARS = [
+  'Economic Diversification',
+  'Innovation & Technology',
+  'Human Capital',
+  'Sustainability & Climate',
+  'Global Competitiveness',
+  'Knowledge Economy',
+];
+
 export default function About() {
   return (
     <section className="about" data-theme="sand" id="about">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">About Cardilett</span>
         <h2 className="section__title reveal">
-          Named for the cardinal{' '}
-          <em>essential, confident, unmistakable.</em>
+          Rooted in Emirati values.{' '}
+          <em>Making UAE the source of global HR standard</em>
         </h2>
       </div>
 
       <div className="about__grid">
         <div className="about__left">
-          {/*
-            Brand-fit alternatives ready to swap in (just change the src):
-              /img/AUH-skyline.jpg        Abu Dhabi skyline (current matches the caption)
-              /img/uae-dubai-skyline.jpg  UAE reach (Dubai skyline at dusk)
-              /img/team-office.jpg        Modern workplace interior
-            NOTE: the original /img/AUH-landscape-*.jpg files have a stock
-            "Your paragraph text" watermark baked in AUH-skyline.jpg is the
-            cleaned (cropped) version, so prefer it over those.
-          */}
           <figure className="about__figure reveal" aria-hidden="true">
             <img src="/img/cardilett-about.jpeg" alt="" />
           </figure>
@@ -29,18 +30,27 @@ export default function About() {
 
         <div className="about__right">
           <p className="about__para reveal">
-            The name <em>Cardilett</em> is drawn from <em>cardinal</em> Latin{' '}
-            <em>cardo</em>, the hinge on which everything essential turns. Our namesake, the
-            Northern Cardinal, is a creature of confidence, loyalty, resilience, and a distinctive
-            voice. Crimson carries courage, authority, and prestige.
+            <b>Cardilett</b> is an Abu Dhabi-based HR Advisory and Consultancy Company dedicated
+            to delivering high-impact HR transformations with rigorous quality, regional agility,
+            and the accelerated execution endorsed by the Abu Dhabi Government.
           </p>
           <p className="about__para reveal">
-            Founded and led by <strong>Hayat Ali Al Hosani</strong>, Cardilett is a
-            government-enabled Emirati consultancy built to compete with the Big&nbsp;4 on rigor
-            and outpace them on agility. Our values{' '}
-            <em>Authority, Innovation, Heritage, Integrity, Excellence</em> guide every
-            engagement.
+            In a market filled with HR consulting firms, <b>Cardilett</b> distinguishes itself as
+            the only <strong>fully Emirati-owned Company</strong>, pioneering top-level
+            sophisticated, forward-thinking and innovative services that are truly incomparable.
+            While we are a young firm, we have ambitious plans, targeting significant and timely
+            contributions towards &ldquo;We the UAE 2031&rdquo; &mdash; all through evidence-based
+            strategies and sovereign design.
           </p>
+
+          <div className="about__vision reveal">
+            <span className="about__vision-label">Aligned with We the UAE 2031 vision</span>
+            <ul className="about__vision-pills">
+              {VISION_PILLARS.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
