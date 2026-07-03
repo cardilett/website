@@ -2095,6 +2095,7 @@ main>section:first-child:not(.hero) {
   flex-direction: column;
   justify-content: center;
   gap: 18px;
+  font-family: '29LT Bukra', var(--font-body);
 }
 
 .founder__tag {
