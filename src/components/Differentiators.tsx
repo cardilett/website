@@ -78,12 +78,12 @@ const DIFFS: Diff[] = [
     title: 'Emirati Leadership, Global Standards',
     body: 'Local context where it counts, international standards where they matter both, always.',
     icon: (
-      <path
-        d="M12 3l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 21l1.2-6.5L2.5 9.9l6.6-.9L12 3Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
+      <>
+        <rect x="0" y="0" width="7" height="24" fill="#EF3340" rx="1" />
+        <rect x="7" y="0" width="17" height="8" fill="#009A44" />
+        <rect x="7" y="8" width="17" height="8" fill="#fff" />
+        <rect x="7" y="16" width="17" height="8" fill="#000" />
+      </>
     ),
   },
 ];
