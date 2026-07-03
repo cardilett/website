@@ -79,10 +79,16 @@ const DIFFS: Diff[] = [
     body: 'Local context where it counts, international standards where they matter both, always.',
     icon: (
       <>
-        <rect x="0" y="0" width="7" height="24" fill="#EF3340" rx="1" />
-        <rect x="7" y="0" width="17" height="8" fill="#009A44" />
-        <rect x="7" y="8" width="17" height="8" fill="#fff" />
-        <rect x="7" y="16" width="17" height="8" fill="#000" />
+        {/* Flagpole */}
+        <rect x="2" y="1.5" width="1.5" height="21" rx="0.75" fill="rgba(255,255,255,0.65)" />
+        {/* Green top stripe */}
+        <path d="M3.5,3.5 C9,1.5 15,5.5 22,3.5 L22,10 C15,12 9,8 3.5,10Z" fill="#009A44" />
+        {/* White middle stripe */}
+        <path d="M3.5,10 C9,8 15,12 22,10 L22,16.5 C15,18.5 9,14.5 3.5,16.5Z" fill="#fff" />
+        {/* Black bottom stripe */}
+        <path d="M3.5,16.5 C9,14.5 15,18.5 22,16.5 L22,21.5 C15,23.5 9,19.5 3.5,21.5Z" fill="#111" />
+        {/* Red hoist band */}
+        <path d="M3.5,3.5 C5,3 6.5,4 8,3.5 L8,21.5 C6.5,22 5,21 3.5,21.5Z" fill="#EF3340" />
       </>
     ),
   },
