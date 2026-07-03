@@ -16,14 +16,14 @@ export default function Team() {
     <section className="team" data-theme="apricot" id="team">
       <div className="section__head section__head--centered">
         <h2 className="section__title reveal">
-          UAE Leadership for Global HR Excellence
+          UAE Leadership for <em>Global HR Excellence</em>
         </h2>
       </div>
 
       {/* Founder feature card */}
       <article className="founder reveal">
         <div className="founder__copy">
-          <span className="founder__tag">Founder &amp; CEO</span>
+          <span className="eyebrow">Founder &amp; CEO</span>
           <h3>Hayat Ali Al Hosani</h3>
           <p>
             With over two decades of leadership across the UAE&apos;s public and private sectors,
