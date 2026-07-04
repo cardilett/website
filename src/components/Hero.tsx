@@ -6,8 +6,8 @@ const TRUST = [
   { num: '100', suffix: '%', label: 'Emirati-owned &\nled company' },
   { num: '20', suffix: '+', label: 'Years of\nexperience' },
   { num: '10', suffix: '+', label: 'Industries served\nacross the globe' },
-  { num: '100 to 20k', suffix: '+', label: 'Workforce-size\nmanagement' },
   { num: '15', suffix: '+', label: 'Countries labour\nlaw expertise' },
+  { num: '100 to 20k', suffix: '+', label: 'Workforce-size\nmanagement' },
 ];
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="hero__inner">
         <h1 className="hero__title">
           <span className="reveal">Shaping Better Organization</span>
-          <span className="reveal">Begins Here.</span>
+          <span className="reveal"><em>Begins Here.</em></span>
         </h1>
 
         <p className="hero__lede reveal">

@@ -27,8 +27,9 @@ export default function Footer() {
             <img src="/img/logo-combined.png" alt="Cardilett" className="foot__logo" />
           </Link>
           <p>Shaping Better Organization. Begins Here.</p>
+          <br></br>
           <p className="foot__fine">
-            A government-enabled, Emirati-led HR consultancy Big&nbsp;4 rigor, regional agility.
+            A government-enabled, Emirati-led HR consultancy with global experties in a regional context.
           </p>
         </div>
 

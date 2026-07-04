@@ -12,68 +12,62 @@ const SERVICES: Service[] = [
   {
     num: '01',
     title: 'HR Transformation & Tech Enablement',
-    body: 'From HRIS selection to digital workflows modernising the function with technology that actually lands.',
-    featured: true,
+    body: 'HRIS to digital workflows, modernising with technology that lands.',
   },
   {
     num: '02',
     title: 'HR Strategy & Operating Model',
-    body: 'Architect the blueprint aligning your HR function to business ambition, governance, and market realities.',
+    body: 'The blueprint aligning HR to business ambition and governance.',
   },
   {
     num: '03',
     title: 'Organization Design & Workforce Planning',
-    body: 'Right-structure, right-size, right-skill built for how your organisation actually creates value today and tomorrow.',
+    body: 'Right-structure, right-size, right-skill for how value is created.',
   },
   {
     num: '04',
     title: 'Talent Management & Career Development',
-    body: 'End-to-end talent architecture: succession, mobility, and growth pathways that keep your best people invested.',
+    body: 'Succession, mobility, and growth that keep your best people invested.',
   },
   {
     num: '05',
     title: 'Employer & Employee Value Proposition',
-    body: 'A value proposition people can feel from first contact to lasting tenure, externally magnetic, internally proven.',
+    body: 'A value proposition people can feel, externally magnetic, internally proven.',
   },
   {
     num: '06',
     title: 'Performance Management & Analytics',
-    body: 'Measurement systems that drive accountability, objectivity, and outcomes not just annual conversations.',
+    body: 'Measurement that drives accountability and real outcomes.',
   },
   {
     num: '07',
     title: 'Retention & People Engagement',
-    body: 'Engagement programs rooted in evidence diagnostics, interventions, and feedback loops that move the numbers.',
+    body: 'Evidence-led diagnostics and feedback that move the numbers.',
   },
   {
     num: '08',
     title: 'Total Rewards, ROI & Budget Modeling',
-    body: 'Pay, benefits, recognition designed as a coherent system, benchmarked locally, justified to the board.',
+    body: 'Pay, benefits, and recognition as one benchmarked system.',
   },
   {
     num: '09',
     title: 'DEI Integrity Scheme',
-    body: 'Diversity, Equity & Inclusion with measurable outcomes honoring Emiratisation priorities and global best practice.',
+    body: 'Measurable inclusion honoring Emiratisation and best practice.',
   },
   {
     num: '10',
     title: 'Culture & Wellbeing Transformation',
-    body: 'Intentional cultural design a workplace that performs and a workforce that wants to stay.',
+    body: 'Intentional cultural design: a workplace that performs and a workforce that wants to stay.',
   },
   {
     num: '11',
     title: 'Job Architecture Redesign',
-    body: 'Grading, job families, and role clarity the structural bones that make pay, growth, and equity work.',
+    body: 'Grading, job families, and role clarity for fair pay and growth.',
   },
   {
     num: '12',
     title: 'HR Policies, Employee Relations & Compliance',
-    body: 'Policy frameworks aligned to UAE Labour Law and MoHRE guidance clear, defensible, and operationally sound.',
-  },
-  {
-    num: '13',
-    title: 'Learning & Leadership Development',
-    body: "Capability programs that build depth designed to close today's gaps and prepare for tomorrow's mandates.",
+    body: 'Frameworks aligned to UAE Labour Law and MoHRE: clear, defensible.',
   },
 ];
 
@@ -84,18 +78,24 @@ interface ServicesProps {
 
 export default function Services({ preview = false }: ServicesProps) {
   return (
-    <section className="services" data-theme="sand" id="services">
-      <div className="section__bg-img" aria-hidden="true">
-        <img src="/img/team-laptops.jpg" alt="" className="parallax-img" loading="lazy" decoding="async" />
-      </div>
+    <section
+      className={`services${preview ? '' : ' services--full'}`}
+      data-theme="sand"
+      id="services"
+    >
+      {!preview && (
+        <div className="section__bg-img" aria-hidden="true">
+          <img src="/img/services-bg.png" alt="" className="parallax-img" loading="lazy" decoding="async" />
+        </div>
+      )}
 
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">What We Do</span>
         <h2 className="section__title reveal">
-          A Human Resources bank of solutions <em>in consultancy and advisory.</em>
+          A Human Resources advisory and consultancy <em>bank of solutions</em>
         </h2>
         <p className="section__sub reveal">
-          Thirteen practice areas, delivered with the rigor of global best-practice and the nuance of a
+          Twelve practice areas, delivered with the rigor of global best-practice and the nuance of a
           regional partner who knows the ground.
         </p>
       </div>
@@ -103,7 +103,7 @@ export default function Services({ preview = false }: ServicesProps) {
       {preview ? (
         <Link href="/services" className="services__gateway reveal">
           <div className="services__gateway-text">
-            <span className="services__gateway-num">13 practice areas</span>
+            <span className="services__gateway-num">12 practice areas</span>
             <h3>Explore our complete HR advisory and consultancy stack</h3>
             <p>
               Cardilett provides integrated advisory solutions, from specialized consulting
@@ -126,18 +126,28 @@ export default function Services({ preview = false }: ServicesProps) {
           </span>
         </Link>
       ) : (
-        <div className="services__grid">
-          {SERVICES.map((s) => (
-            <article
-              key={s.num}
-              className={`service reveal${s.featured ? ' service--featured' : ''}`}
-            >
-              <div className="service__num">{s.num}</div>
-              <h3>{s.title}</h3>
-              <p>{s.body}</p>
-            </article>
-          ))}
-        </div>
+        <>
+          <div className="services__intro reveal">
+            <span className="services__gateway-num">12 practice areas</span>
+            <h3>Explore our complete HR advisory and consultancy stack</h3>
+            <p>
+              Cardilett provides integrated advisory solutions, from specialized consulting
+              engagements to large-scale transformation programs which enable you to realize
+              strategic objectives and maintain competitive advantage. We serve as your dedicated
+              strategic partner throughout your organizational growth journey.
+            </p>
+          </div>
+
+          <div className="services__grid">
+            {SERVICES.map((s) => (
+              <article key={s.num} className="service reveal">
+                <div className="service__num">{s.num}</div>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </article>
+            ))}
+          </div>
+        </>
       )}
 
       {/* Under the crimson box (this section only): a single centered teal CTA

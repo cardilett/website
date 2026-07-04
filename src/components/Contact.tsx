@@ -136,10 +136,8 @@ export default function Contact() {
             Start with a conversation. <em>Leave with a plan.</em>
           </h2>
           <p className="contact__lede reveal">
-            Tell us what you&apos;re solving for. A senior member of our team will come back
-            within one business day confidentiality assumed, always.
+            Book a consultation and a senior member of our team will come back within one business day. <br></br> Confidentiality assured, always.
           </p>
-
           <div className="contact__meta reveal">
             {CONTACT_ROWS.map(({ label, value, href, ariaLabel, icon }) => (
               <div key={label} className="contact__row">

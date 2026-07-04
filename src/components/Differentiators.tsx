@@ -78,12 +78,18 @@ const DIFFS: Diff[] = [
     title: 'Emirati Leadership, Global Standards',
     body: 'Local context where it counts, international standards where they matter both, always.',
     icon: (
-      <path
-        d="M12 3l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 21l1.2-6.5L2.5 9.9l6.6-.9L12 3Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
+      <>
+        {/* Flagpole */}
+        <rect x="2" y="1.5" width="1.5" height="21" rx="0.75" fill="rgba(111,7,7,0.4)" />
+        {/* Green top stripe */}
+        <path d="M3.5,3.5 C9,1.5 15,5.5 22,3.5 L22,10 C15,12 9,8 3.5,10Z" fill="#009A44" />
+        {/* White middle stripe */}
+        <path d="M3.5,10 C9,8 15,12 22,10 L22,16.5 C15,18.5 9,14.5 3.5,16.5Z" fill="#fff" />
+        {/* Black bottom stripe */}
+        <path d="M3.5,16.5 C9,14.5 15,18.5 22,16.5 L22,21.5 C15,23.5 9,19.5 3.5,21.5Z" fill="#111" />
+        {/* Red hoist band */}
+        <path d="M3.5,3.5 C5,3 6.5,4 8,3.5 L8,21.5 C6.5,22 5,21 3.5,21.5Z" fill="#EF3340" />
+      </>
     ),
   },
 ];
@@ -98,7 +104,8 @@ export default function Differentiators() {
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Why Cardilett</span>
         <h2 className="section__title reveal">
-          Authority and agility <em>held in equal measure.</em>
+          Why organizations <br></br>
+          <em>choose Cardilett.</em>
         </h2>
         <p className="section__sub reveal">
           The reasons clients bring us in and the reasons they keep us close.

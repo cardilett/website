@@ -14,14 +14,7 @@ export default function ServicesPage() {
     <main>
       <Services />
       <Methodology />
-      <CTASection
-        title={
-          <>
-            Not sure where to <em>start?</em>
-          </>
-        }
-        sub="Tell us the outcome you’re after and we’ll point you to the right engagement model advisory, project, or retainer."
-      />
+      <CTASection/>
     </main>
   );
 }

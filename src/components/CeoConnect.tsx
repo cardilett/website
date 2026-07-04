@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 /**
  * CEO-section CTA (Team section only). A single centered "Connect with our CEO"
- * button; clicking it reveals the CEO's direct contact methods: email, mobile
- * (coming soon), WhatsApp and personal LinkedIn. Replaces the default
+ * button; clicking it reveals the CEO's direct contact methods: email, mobile,
+ * WhatsApp and personal LinkedIn. Replaces the default
  * SectionCTA for this section only every other section keeps its usual pair.
  */
 export default function CeoConnect() {
@@ -41,25 +41,25 @@ export default function CeoConnect() {
 
       {open && (
         <div className="ceo-connect__details" id="ceo-connect-details">
-          <a className="ceo-connect__link" href="mailto:hayat@cardilett.ae">
+          <a className="ceo-connect__link ceo-connect__link--email" href="mailto:hayat@cardilett.ae">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 6.5h18v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
               <path d="M3.5 7 12 13l8.5-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            hayat@cardilett.ae
+            <u>hayat@cardilett.ae</u>
           </a>
 
-          <span className="ceo-connect__link ceo-connect__link--muted" aria-label="Mobile number coming soon">
+          <a className="ceo-connect__link ceo-connect__link--phone" href="tel:+971547472849" aria-label="Call our CEO">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5H7a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 7 3.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
               <path d="M10.5 17.5h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             </svg>
-            Mobile coming soon
-          </span>
+            +971 54 747 2849
+          </a>
 
           <a
-            className="ceo-connect__link"
-            href="https://wa.me/"
+            className="ceo-connect__link ceo-connect__link--whatsapp"
+            href="https://wa.me/971547472849"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Message our CEO on WhatsApp"
@@ -73,8 +73,8 @@ export default function CeoConnect() {
           </a>
 
           <a
-            className="ceo-connect__link"
-            href="https://www.linkedin.com/in/hayat-ali-al-hosani/"
+            className="ceo-connect__link ceo-connect__link--linkedin"
+            href="https://www.linkedin.com/in/hayat-al-hosani-021b9329/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Our CEO on LinkedIn"
