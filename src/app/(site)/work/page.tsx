@@ -12,14 +12,7 @@ export default function WorkPage() {
   return (
     <main>
       <CaseStudies />
-      <CTASection
-        title={
-          <>
-            Want the numbers behind <em>your</em> challenge?
-          </>
-        }
-        sub="Book a confidential walkthrough and we’ll talk through outcomes relevant to your sector and size."
-      />
+      <CTASection/>
     </main>
   );
 }

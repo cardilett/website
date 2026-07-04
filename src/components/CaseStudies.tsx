@@ -6,7 +6,7 @@ export default function CaseStudies() {
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Case Studies</span>
         <h2 className="section__title reveal">
-          Anonymised outcomes, <em>unambiguous impact.</em>
+          Impactful outcomes, <em>unambiguous impact.</em>
         </h2>
         <p className="section__sub reveal">
           Snapshots from our practice. Client names withheld for confidentiality every figure is

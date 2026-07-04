@@ -1,5 +1,3 @@
-import SectionCTA from '@/components/SectionCTA';
-
 interface Value {
   title: string;
   /** Brand tile colour (maps to a modifier class below). */
@@ -86,8 +84,6 @@ export default function MissionValues() {
           ))}
         </div>
       </div>
-
-      <SectionCTA />
     </section>
   );
 }

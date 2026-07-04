@@ -496,6 +496,10 @@ main>section:first-child:not(.hero) {
   color: var(--text);
 }
 
+.serve[data-theme="sand"] {
+  background: #cee2c1;
+}
+
 [data-theme="sand-dim"] {
   background: #F6EEE2;
   color: var(--text);
@@ -1878,6 +1882,15 @@ main>section:first-child:not(.hero) {
   color: var(--sand);
   font-style: italic;
   font-family: var(--font-serif);
+  /* Content hidden (see note below), but the box stays to preserve the
+     section's height and the dock background's crop/position. */
+  visibility: hidden;
+}
+
+/* Same treatment for this section's CTA: hidden, not removed, so the
+   section keeps its original height and spacing. */
+.method .section-cta {
+  visibility: hidden;
 }
 
 @media (max-width: 900px) {

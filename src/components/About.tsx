@@ -1,5 +1,3 @@
-import SectionCTA from '@/components/SectionCTA';
-
 // "We the UAE 2031" pillars shown as pills under the About copy.
 const VISION_PILLARS = [
   'Economic Diversification',
@@ -54,8 +52,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <SectionCTA />
     </section>
   );
 }

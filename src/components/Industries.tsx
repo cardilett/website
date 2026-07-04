@@ -1,5 +1,3 @@
-import SectionCTA from '@/components/SectionCTA';
-
 // ---------------------------------------------------------------------------
 // "Who We Serve" the twelve sectors clustered into five compact groups.
 // Kept deliberately short: plain text under a small icon, no heavy boxes,
@@ -63,7 +61,7 @@ export default function Industries() {
     <section className="serve" data-theme="sand" id="industries">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Who We Serve</span>
-        <h2 className="section__title reveal">Trusted across every sector that shapes the UAE.</h2>
+        <h2 className="section__title reveal">Trusted across sectors that shapes the UAE.</h2>
         <p className="section__sub reveal">
           SMEs, enterprises, family businesses, and government entities grouped by the markets we
           know best.
@@ -81,8 +79,6 @@ export default function Industries() {
           </div>
         ))}
       </div>
-
-      <SectionCTA />
     </section>
   );
 }
