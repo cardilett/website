@@ -496,6 +496,10 @@ main>section:first-child:not(.hero) {
   color: var(--text);
 }
 
+.serve[data-theme="sand"] {
+  background: #ACB9A0;
+}
+
 [data-theme="sand-dim"] {
   background: #F6EEE2;
   color: var(--text);
