@@ -16,7 +16,8 @@ export default function About() {
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">About Cardilett</span>
         <h2 className="section__title reveal">
-          Rooted in Emirati values.{' '}
+          Rooted in Emirati values.
+          <br />
           <em>Making UAE the source of global HR standard</em>
         </h2>
       </div>

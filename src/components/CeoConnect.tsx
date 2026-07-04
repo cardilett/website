@@ -41,15 +41,15 @@ export default function CeoConnect() {
 
       {open && (
         <div className="ceo-connect__details" id="ceo-connect-details">
-          <a className="ceo-connect__link" href="mailto:hayat@cardilett.ae">
+          <a className="ceo-connect__link ceo-connect__link--email" href="mailto:hayat@cardilett.ae">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 6.5h18v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
               <path d="M3.5 7 12 13l8.5-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            hayat@cardilett.ae
+            <u>hayat@cardilett.ae</u>
           </a>
 
-          <a className="ceo-connect__link" href="tel:+971547472849" aria-label="Call our CEO">
+          <a className="ceo-connect__link ceo-connect__link--phone" href="tel:+971547472849" aria-label="Call our CEO">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5H7a1.5 1.5 0 0 1-1.5-1.5V5A1.5 1.5 0 0 1 7 3.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
               <path d="M10.5 17.5h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
@@ -58,7 +58,7 @@ export default function CeoConnect() {
           </a>
 
           <a
-            className="ceo-connect__link"
+            className="ceo-connect__link ceo-connect__link--whatsapp"
             href="https://wa.me/971547472849"
             target="_blank"
             rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default function CeoConnect() {
           </a>
 
           <a
-            className="ceo-connect__link"
+            className="ceo-connect__link ceo-connect__link--linkedin"
             href="https://www.linkedin.com/in/hayat-al-hosani-021b9329/"
             target="_blank"
             rel="noopener noreferrer"

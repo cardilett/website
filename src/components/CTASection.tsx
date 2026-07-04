@@ -4,7 +4,7 @@ import { type ReactNode } from 'react';
 interface Props {
   eyebrow?: string;
   title?: ReactNode;
-  sub?: string;
+  sub?: ReactNode;
 }
 
 function Arrow() {
@@ -25,10 +25,14 @@ export default function CTASection({
   eyebrow = "Let's talk",
   title = (
     <>
-      Ready to make HR your <em>advantage?</em>
+      Actively <em>listening</em>. <br></br>Delivering <em>expectations</em>. <br></br> <em>Quality</em> ensured. <br></br>And a little more...
     </>
   ),
-  sub = 'Book a consultation and a senior member of our team will come back within one business day confidentiality assumed, always.',
+  sub = (
+    <>
+      Book a consultation and a senior member of our team will come back within one business day. <br /> Confidentiality assured, always.
+    </>
+  ),
 }: Props) {
   return (
     <section className="cta" data-theme="crimson">

@@ -141,8 +141,7 @@ export default function Testimonials() {
         <span className="eyebrow reveal">In Their Words</span>
         <h2 className="section__title reveal">Voices from our network.</h2>
         <p className="section__sub reveal">
-          Endorsements from senior leaders across the Big&nbsp;4 and the UAE banking and
-          enterprise market.
+              Endorsements from senior leaders across top-tier global professional services firms and the UAE enterprise market.
         </p>
       </div>
 
@@ -155,8 +154,6 @@ export default function Testimonials() {
           </div>
         ))}
       </div>
-
-      <SectionCTA />
     </section>
   );
 }

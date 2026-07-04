@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s Cardilett',
   },
   description:
-    'Cardilett is a UAE-based, Emirati-led HR consultancy delivering Big 4 rigor with regional agility. Redefining HR through Innovation, Integration, and Impact.',
+    'Cardilett is a UAE-based, Emirati-led HR consultancy delivering with regional agility. Redefining HR through Innovation, Integration, and Impact.',
 };
 
 export default function RootLayout({

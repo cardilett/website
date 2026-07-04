@@ -104,7 +104,8 @@ export default function Differentiators() {
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Why Cardilett</span>
         <h2 className="section__title reveal">
-          Authority and agility <em>held in equal measure.</em>
+          Why organizations <br></br>
+          <em>choose Cardilett.</em>
         </h2>
         <p className="section__sub reveal">
           The reasons clients bring us in and the reasons they keep us close.
