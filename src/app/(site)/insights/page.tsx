@@ -12,15 +12,7 @@ export default function InsightsPage() {
   return (
     <main>
       <Insights />
-      <CTASection
-        eyebrow="Stay close"
-        title={
-          <>
-            Get our thinking <em>first.</em>
-          </>
-        }
-        sub="Be among the first to read new essays and points of view as we publish them."
-      />
+      <CTASection />
     </main>
   );
 }
