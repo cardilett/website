@@ -54,21 +54,6 @@ const SERVICES: Service[] = [
     title: 'HR Governance & Compliance',
     body: 'Governing the HR framework of policies, right decisions, oversight, and control, all while ensuring HR compliance is aligned with and complies with employment legislation and regulatory obligations in the UAE.',
   },
-  // {
-  //   num: '10',
-  //   title: 'Culture & Wellbeing Transformation',
-  //   body: 'Intentional cultural design: a workplace that performs and a workforce that wants to stay.',
-  // },
-  // {
-  //   num: '11',
-  //   title: 'Job Architecture Redesign',
-  //   body: 'Grading, job families, and role clarity for fair pay and growth.',
-  // },
-  // {
-  //   num: '12',
-  //   title: 'HR Policies, Employee Relations & Compliance',
-  //   body: 'Frameworks aligned to UAE Labour Law and MoHRE: clear, defensible.',
-  // },
 ];
 
 interface ServicesProps {
