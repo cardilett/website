@@ -142,28 +142,32 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <Link href="/contact" className="nav__cta">
-            Contact us
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path
-                d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+          <div className="nav__actions">
+            {!isActive(pathname, '/contact') && (
+              <Link href="/contact" className="nav__cta">
+                Contact us
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            )}
 
-          <button
-            className="nav__toggle"
-            aria-label="Toggle menu"
-            aria-expanded={isOpen}
-            onClick={() => setIsOpen((o) => !o)}
-          >
-            <span />
-            <span />
-          </button>
+            <button
+              className="nav__toggle"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              onClick={() => setIsOpen((o) => !o)}
+            >
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
 
         <div className="nav__drawer">
@@ -172,9 +176,11 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <Link href="/contact" className="nav__drawer-cta">
-            Contact us →
-          </Link>
+          {!isActive(pathname, '/contact') && (
+            <Link href="/contact" className="nav__drawer-cta">
+              Contact us →
+            </Link>
+          )}
         </div>
       </header>
     </>
