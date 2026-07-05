@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS contact_submissions (
   email VARCHAR(255) NOT NULL,
   company VARCHAR(255) NOT NULL DEFAULT '',
   need VARCHAR(255) NOT NULL DEFAULT '',
+  phone VARCHAR(64) NOT NULL DEFAULT '',
+  comm_method VARCHAR(255) NOT NULL DEFAULT '',
   source VARCHAR(32) NOT NULL DEFAULT 'contact',
   message TEXT,
   consent TINYINT(1) NOT NULL DEFAULT 0,

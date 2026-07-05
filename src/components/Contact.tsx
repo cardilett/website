@@ -1,23 +1,4 @@
-'use client';
-
-import { type FormEvent, useState } from 'react';
-
-type Status = 'idle' | 'submitting' | 'success' | 'error';
-
-const NEEDS = [
-  'HR Strategy & Operating Model',
-  'Organisation Design & Workforce Planning',
-  'Talent & Career Development',
-  'Performance Management & Analytics',
-  'Total Rewards & Budget Modeling',
-  'DEI Integrity Scheme',
-  'Culture & Wellbeing',
-  'Job Architecture',
-  'Policies, Relations & Compliance',
-  'Learning & Leadership',
-  'HR Transformation & Tech',
-  'Other / Not sure yet',
-];
+import ConsultationForm from '@/components/ConsultationForm';
 
 const ICONS = {
   email: (
@@ -75,53 +56,6 @@ const CONTACT_ROWS = [
 ];
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
-  const [need, setNeed] = useState('');
-  const [message, setMessage] = useState('');
-  const [consent, setConsent] = useState(false);
-  const [status, setStatus] = useState<Status>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-  const [reference, setReference] = useState('');
-
-  const busy = status === 'submitting';
-  const done = status === 'success';
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    // Client-side guard before hitting the network
-    if (!name.trim() || !email.trim() || !consent) {
-      setErrorMsg('Please fill in your name, email, and accept the consent checkbox.');
-      setStatus('error');
-      return;
-    }
-
-    setStatus('submitting');
-    setErrorMsg('');
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, company, need, message, consent, formType: 'contact' }),
-      });
-
-      const json = await res.json();
-
-      if (!res.ok) throw new Error(json.error ?? 'Something went wrong.');
-
-      if (json.reference) setReference(json.reference);
-      setStatus('success');
-    } catch (err) {
-      setErrorMsg(
-        err instanceof Error ? err.message : 'Something went wrong. Please try again.'
-      );
-      setStatus('error');
-    }
-  }
-
   return (
     <section className="contact" data-theme="crimson" id="contact">
       <div className="contact__bg" aria-hidden="true">
@@ -162,139 +96,10 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* ---- Right column form ---- */}
-        {/* On success the whole panel turns teal to confirm the request landed. */}
-        <form
-          className={`contact__form reveal${done ? ' contact__form--teal' : ''}`}
-          onSubmit={handleSubmit}
-          noValidate
-        >
-          <div className="field">
-            <label htmlFor="c-name">Name</label>
-            <input
-              id="c-name"
-              name="name"
-              type="text"
-              required
-              autoComplete="name"
-              placeholder="Full name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              disabled={busy || done}
-            />
-          </div>
-
-          <div className="field">
-            <label htmlFor="c-email">Email</label>
-            <input
-              id="c-email"
-              name="email"
-              type="email"
-              required
-              autoComplete="email"
-              placeholder="you@company.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={busy || done}
-            />
-          </div>
-
-          <div className="field">
-            <label htmlFor="c-company">Company</label>
-            <input
-              id="c-company"
-              name="company"
-              type="text"
-              autoComplete="organization"
-              placeholder="Organisation"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              disabled={busy || done}
-            />
-          </div>
-
-          <div className="field">
-            <label htmlFor="c-need">What do you need?</label>
-            <select
-              id="c-need"
-              name="need"
-              value={need}
-              onChange={(e) => setNeed(e.target.value)}
-              disabled={busy || done}
-            >
-              <option value="">Select an area…</option>
-              {NEEDS.map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="field field--full">
-            <label htmlFor="c-msg">Brief context (optional)</label>
-            <textarea
-              id="c-msg"
-              name="message"
-              rows={4}
-              placeholder="What outcome are you after?"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              disabled={busy || done}
-            />
-          </div>
-
-          <div className="field field--full field--check">
-            <input
-              id="c-consent"
-              name="consent"
-              type="checkbox"
-              required
-              checked={consent}
-              onChange={(e) => setConsent(e.target.checked)}
-              disabled={busy || done}
-            />
-            <label htmlFor="c-consent">
-              I consent to Cardilett contacting me regarding this enquiry. We handle data
-              confidentially.
-            </label>
-          </div>
-
-          <button
-            type="submit"
-            className="btn btn--primary btn--block"
-            disabled={busy || done}
-          >
-            {busy ? 'Sending…' : done ? 'Sent' : 'Request a Proposal'}
-            {!busy && !done && (
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path
-                  d="M3 7h8m0 0L7.5 3.5M11 7l-3.5 3.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
-          </button>
-
-          {done && (
-            <p className="contact__success contact__success--teal">
-              Your request has been submitted successfully, and we will be in touch with you
-              within 2 business working days.
-              {reference && (
-                <span className="contact__success-ref">
-                  Your reference number: <strong>{reference}</strong>
-                </span>
-              )}
-            </p>
-          )}
-
-          {status === 'error' && errorMsg && (
-            <p className="contact__error">{errorMsg}</p>
-          )}
-        </form>
+        {/* ---- Right column: same form & design as "Book your free consultation" ---- */}
+        <div className="contact__form reveal">
+          <ConsultationForm idPrefix="c" />
+        </div>
       </div>
     </section>
   );
