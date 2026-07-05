@@ -11,63 +11,48 @@ interface Service {
 const SERVICES: Service[] = [
   {
     num: '01',
-    title: 'HR Transformation & Tech Enablement',
-    body: 'HRIS to digital workflows, modernising with technology that lands.',
+    title: 'Tech Enablement & ROI',
+    body: 'Maximize the value of your HR systems by gaining better visibility into your systems’ performance, insights, measurable ROI, and a clear action plan.',
   },
   {
     num: '02',
-    title: 'HR Strategy & Operating Model',
-    body: 'The blueprint aligning HR to business ambition and governance.',
+    title: 'HR Transformation, Strategy & Operating Model',
+    body: 'Strategy redesigned, customized in line with the company’s Balanced Scorecard, efficient operating model that complements the overall business goals.',
   },
   {
     num: '03',
     title: 'Organization Design & Workforce Planning',
-    body: 'Right-structure, right-size, right-skill for how value is created.',
+    body: 'Building organizations that are based on skills, capabilities, and future workforce needs, including succession planning, upskilling, retention, and talent mobility.',
   },
   {
     num: '04',
     title: 'Talent Management & Career Development',
-    body: 'Succession, mobility, and growth that keep your best people invested.',
+    body: 'Clear paths of growth for both organizations and employees, covering the employee progression lifecycle starting from pre-onboarding, leadership ladder, and retention program.',
   },
   {
     num: '05',
     title: 'Employer & Employee Value Proposition',
-    body: 'A value proposition people can feel, externally magnetic, internally proven.',
+    body: 'A holistic redesign of where the organization places itself in the market from a brand value perspective, and the full stack of what employees bring to the organization.',
   },
   {
     num: '06',
-    title: 'Performance Management & Analytics',
-    body: 'Measurement that drives accountability and real outcomes.',
+    title: 'Performance Management, People Engagement & Analytics',
+    body: 'Performance and engagement records of at least 3 years, tracked and analyzed to turn data into an effective, actionable plan, accountabilities, and measurable outcomes.',
   },
   {
     num: '07',
-    title: 'Retention & People Engagement',
-    body: 'Evidence-led diagnostics and feedback that move the numbers.',
+    title: 'Cultural Transformation & DEI Integrity Scheme',
+    body: 'Collaborate with organizations to achieve their desired culture by applying customized alterations aligned with long-term goals, with a skill-based, fair opportunity scheme for all.',
   },
   {
     num: '08',
-    title: 'Total Rewards, ROI & Budget Modeling',
-    body: 'Pay, benefits, and recognition as one benchmarked system.',
+    title: 'Total Rewards & Job Architecture Design',
+    body: 'Revamping your total rewards program that includes compensation, benefits, and recognition schemes. Architecting job frameworks that organize all jobs into a consistent structure.',
   },
   {
     num: '09',
-    title: 'DEI Integrity Scheme',
-    body: 'Measurable inclusion honoring Emiratisation and best practice.',
-  },
-  {
-    num: '10',
-    title: 'Culture & Wellbeing Transformation',
-    body: 'Intentional cultural design: a workplace that performs and a workforce that wants to stay.',
-  },
-  {
-    num: '11',
-    title: 'Job Architecture Redesign',
-    body: 'Grading, job families, and role clarity for fair pay and growth.',
-  },
-  {
-    num: '12',
-    title: 'HR Policies, Employee Relations & Compliance',
-    body: 'Frameworks aligned to UAE Labour Law and MoHRE: clear, defensible.',
+    title: 'HR Governance & Compliance',
+    body: 'Governing the HR framework of policies, right decisions, oversight, and control, all while ensuring HR compliance is aligned with and complies with employment legislation and regulatory obligations in the UAE.',
   },
 ];
 
@@ -95,7 +80,7 @@ export default function Services({ preview = false }: ServicesProps) {
           A Human Resources advisory and consultancy <em>bank of solutions</em>
         </h2>
         <p className="section__sub reveal">
-          Twelve practice areas, delivered with the rigor of global best-practice and the nuance of a
+          Nine practice areas, delivered with the rigor of global best practice and the nuance of a
           regional partner who knows the ground.
         </p>
       </div>
@@ -103,7 +88,7 @@ export default function Services({ preview = false }: ServicesProps) {
       {preview ? (
         <Link href="/services" className="services__gateway reveal">
           <div className="services__gateway-text">
-            <span className="services__gateway-num">12 practice areas</span>
+            <span className="services__gateway-num">9 practice areas</span>
             <h3>Explore our complete HR advisory and consultancy stack</h3>
             <p>
               Cardilett provides integrated advisory solutions, from specialized consulting
@@ -128,7 +113,7 @@ export default function Services({ preview = false }: ServicesProps) {
       ) : (
         <>
           <div className="services__intro reveal">
-            <span className="services__gateway-num">12 practice areas</span>
+            <span className="services__gateway-num">9 practice areas</span>
             <h3>Explore our complete HR advisory and consultancy stack</h3>
             <p>
               Cardilett provides integrated advisory solutions, from specialized consulting

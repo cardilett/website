@@ -59,8 +59,8 @@ export async function POST(req: NextRequest) {
   try {
     const pool = getDbPool();
     await pool.execute(
-      'INSERT INTO contact_submissions (name, email, company, need, message, consent, source) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      [name, email, company, need, message, consent ? 1 : 0, source]
+      'INSERT INTO contact_submissions (name, email, company, need, phone, comm_method, message, consent, source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      [name, email, company, need, phone, commMethod, message, consent ? 1 : 0, source]
     );
   } catch (err) {
     console.error('[contact] Database insert failed:', err);
