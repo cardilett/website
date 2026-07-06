@@ -32,6 +32,7 @@
   --sage: #BCC7B9;
   --gold: #CBAB51;
   --gold-soft: #E4C979;
+  --coral: #D97757;
   --indigo: #2B2B3D;
   --indigo-deep: #1C1C2A;
   --indigo-soft: #3E3E55;
@@ -2209,18 +2210,20 @@ main>section:first-child:not(.hero) {
 .cases__grid {
   max-width: var(--max);
   margin: 0 auto;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(18px, 2vw, 24px);
+  gap: clamp(28px, 3vw, 36px) clamp(18px, 2vw, 24px);
 }
 
 .case {
-  padding: clamp(34px, 4vw, 56px);
+  padding: clamp(28px, 3vw, 40px) clamp(28px, 3vw, 40px) clamp(32px, 3vw, 44px);
   background: var(--paper);
   border-radius: var(--r-lg);
   border: 1px solid var(--hairline);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  container-type: inline-size;
   transition: transform .5s var(--ease-out), box-shadow .4s var(--ease);
 }
 
@@ -2229,30 +2232,40 @@ main>section:first-child:not(.hero) {
   box-shadow: var(--shadow-lg);
 }
 
-.case::before {
-  content: "";
+.case__tag {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--crimson) 0%, var(--gold) 50%, var(--teal) 100%);
-  opacity: 0;
-  transition: opacity .4s var(--ease);
+  right: clamp(14px, 1.4vw, 18px);
+  transform: translateY(-50%);
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: var(--r-pill);
+  color: #FFFFFF;
+  background: var(--teal-deep);
+  font-weight: 650;
+  box-shadow: var(--shadow-sm);
 }
 
-.case:hover::before {
-  opacity: 1;
+.case__metric-row {
+  display: flex;
+  align-items: last baseline;
+  flex-wrap: nowrap;
+  column-gap: 16px;
+  row-gap: 8px;
+  margin-bottom: 24px;
 }
 
 .case__metric {
-  font-size: clamp(64px, 7vw, 104px);
-  font-weight: 780;
+  font-size: clamp(52px, 17cqi, 108px);
+  font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 1;
+  line-height: 0.9;
   color: var(--crimson);
-  margin-bottom: 26px;
   font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
 }
 
 .case__metric span {
@@ -2263,31 +2276,89 @@ main>section:first-child:not(.hero) {
   font-weight: 400;
 }
 
+/* The "+" glyph is optically much smaller than "%" at the same size, so bump
+   it up to read at the same visual weight. */
+.case__metric span.case__metric-suffix--plus {
+  font-size: 0.72em;
+}
+
+.case__metric-aside {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: clamp(8px, 1vw, 14px);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Arrows and dots are sized in cqi (a fraction of the card width) so they
+   scale together with the metric label as the card gets narrower. */
+.case__trend {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.case__trend--arrow {
+  width: auto;
+  height: clamp(38px, 13cqi, 66px);
+  margin-bottom: 6px;
+  color: #629a6c;
+}
+
+.case__trend--dots {
+  height: auto;
+  width: clamp(36px, 12cqi, 52px);
+  margin-bottom: clamp(14px, 5cqi, 26px);
+}
+
+.case__metric-label {
+  font-size: clamp(17px, 6cqi, 32px);
+  font-weight: 750;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--crimson);
+  /* Line breaks are inserted in markup, so the box hugs its widest line and
+     the arrow sits right next to the text; text-align keeps both lines flush
+     to the content's right edge. */
+  width: max-content;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
 .case h3 {
   font-size: clamp(21px, 1.6vw, 27px);
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.case__section {
+  margin-bottom: 20px;
+}
+
+.case__section:last-child {
+  margin-bottom: 0;
+}
+
+.case__label {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.case__label--challenge {
+  color: var(--coral);
+}
+
+.case__label--solution {
+  color: var(--teal-deep);
 }
 
 .case p {
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 15.5px;
+  line-height: 1.6;
   color: var(--muted);
-  max-width: 46ch;
-  margin-bottom: 26px;
-}
-
-.case__tag {
-  display: inline-block;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  padding: 6px 13px;
-  border-radius: var(--r-pill);
-  color: var(--teal-deep);
-  background: rgba(76, 156, 154, 0.10);
-  border: 1px solid rgba(76, 156, 154, 0.26);
-  font-weight: 640;
+  margin: 0;
 }
 
 .cases__note {
