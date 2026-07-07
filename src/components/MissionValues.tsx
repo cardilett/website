@@ -41,6 +41,7 @@ export default function MissionValues() {
     <section className="mission" data-theme="paper" id="mission">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">What We Stand For</span>
+        <br />
         <h2 className="section__title reveal">
           Mission <em>&amp; Values</em>
         </h2>

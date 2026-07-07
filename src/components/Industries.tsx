@@ -56,6 +56,7 @@ export default function Industries() {
     <section className="serve" data-theme="sand" id="industries">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Who We Serve</span>
+        <br />
         <h2 className="section__title reveal">
           Trusted across every sector that <em>shapes the UAE.</em>
         </h2>

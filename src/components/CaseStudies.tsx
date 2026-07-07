@@ -106,6 +106,7 @@ export default function CaseStudies() {
     <section className="cases" data-theme="sand" id="cases">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Case Studies</span>
+        <br />
         <h2 className="section__title reveal">
           Solutions for complex cases, <em>impactful outcomes.</em>
         </h2>

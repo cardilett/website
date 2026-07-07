@@ -15,6 +15,8 @@ export default function Team() {
   return (
     <section className="team" data-theme="apricot" id="team">
       <div className="section__head section__head--centered">
+        <span className="eyebrow">Who We Stand With</span>
+        <br />
         <h2 className="section__title reveal">
           UAE Leadership for <em>Global HR Excellence</em>
         </h2>
@@ -23,8 +25,8 @@ export default function Team() {
       {/* Founder feature card */}
       <article className="founder reveal">
         <div className="founder__copy">
-          <span className="eyebrow">Founder &amp; CEO</span>
           <h3>Hayat Ali Al Hosani</h3>
+          <span className="eyebrow">Founder & CEO</span>
           <p>
             With over two decades of leadership across the UAE&apos;s public and private sectors,
             Hayat Al Hosani has advised boards, CEOs, and executive teams on building resilient,

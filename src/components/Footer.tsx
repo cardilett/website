@@ -72,7 +72,7 @@ export default function Footer() {
                   LinkedIn
                 </a>
               </li>
-              <li>Abu Dhabi, United Arab Emirates</li>
+              <li>Office 12-49, Mohamed Bin Zayed City, Onwani: 20602, Abu Dhabi – UAE</li>
               <li>Mon-Fri · 08:00–16:00 UAE time</li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
       <div className="foot__bottom">
         <span>© {YEAR} Cardilett HR Advisory and Consultancy. All rights reserved.</span>
         <Link href="/privacy-policy">Privacy Policy</Link>
-        <span>100% Emirati-Owned & led company  · Abu Dhabi, UAE</span>
+        <span>100% Emirati-Owned & Led Company  · Abu Dhabi, UAE</span>
       </div>
     </footer>
   );

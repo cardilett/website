@@ -103,6 +103,7 @@ export default function Differentiators() {
 
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Why Cardilett</span>
+        <br />
         <h2 className="section__title reveal">
           Why organizations <br></br>
           <em>choose Cardilett.</em>

@@ -30,6 +30,7 @@ export default function Insights() {
     <section className="insights" data-theme="sand" id="insights">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">Insights</span>
+        <br />
         <h2 className="section__title reveal">
           Timely thinking on <em>HR in the UAE.</em>
         </h2>

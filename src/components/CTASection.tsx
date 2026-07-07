@@ -38,6 +38,7 @@ export default function CTASection({
     <section className="cta" data-theme="crimson">
       <div className="cta__inner">
         <span className="eyebrow reveal">{eyebrow}</span>
+        <br />
         <h2 className="cta__title reveal">{title}</h2>
         <p className="cta__sub reveal">{sub}</p>
         <div className="cta__actions reveal">

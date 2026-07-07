@@ -4,7 +4,7 @@ import Methodology from '@/components/Methodology';
 import CTASection from '@/components/CTASection';
 
 export const metadata: Metadata = {
-  title: 'What We Do',
+  title: 'What We Offer',
   description:
     'Nine HR advisory practice areas strategy, organization design, total rewards, talent, compliance and more delivered with global rigor and regional nuance.',
 };

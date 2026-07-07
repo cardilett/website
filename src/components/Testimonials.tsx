@@ -139,6 +139,7 @@ export default function Testimonials() {
     <section className="testimonials" data-theme="sand" id="testimonials">
       <div className="section__head section__head--centered">
         <span className="eyebrow reveal">In Their Words</span>
+        <br />
         <h2 className="section__title reveal">Voices from our network.</h2>
         <p className="section__sub reveal">
               Endorsements from senior leaders across top-tier global professional services firms and the UAE enterprise market.

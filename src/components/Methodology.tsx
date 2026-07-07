@@ -71,7 +71,8 @@ export default function Methodology() {
       </div>
 
       <div className="section__head section__head--centered">
-        <span className="eyebrow reveal">How We Work</span>
+        <span className="eyebrow reveal">Our Methodology</span>
+        <br />
         <h2 className="section__title reveal">
           A disciplined path from <em>diagnosis to enablement.</em>
         </h2>

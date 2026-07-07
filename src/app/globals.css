@@ -585,7 +585,7 @@ main>section:first-child:not(.hero) {
   align-items: center;
   gap: 10px;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 14.4px;
   line-height: 1;
   font-weight: 650;
   letter-spacing: 0.18em;
@@ -603,7 +603,13 @@ main>section:first-child:not(.hero) {
 }
 
 .section__head--centered .eyebrow {
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.founder .eyebrow::before {
+  display: none;
 }
 
 [data-theme="indigo"] .eyebrow,

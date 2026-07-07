@@ -15,6 +15,7 @@ export default function PrivacyPolicyPage() {
       <section className={styles.legal} data-theme="indigo-deep">
         <div className={styles.legal__head}>
           <span className="eyebrow">Legal</span>
+          <br />
           <h1 className={styles.legal__title}>Privacy Policy</h1>
           <p className={styles.legal__updated}>Last updated: {UPDATED}</p>
         </div>

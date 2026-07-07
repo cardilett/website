@@ -44,7 +44,7 @@ const CONTACT_ROWS = [
     href: 'mailto:connect@cardilett.ae',
     icon: ICONS.email,
   },
-  { label: 'Office', value: 'Abu Dhabi, United Arab Emirates', icon: ICONS.office },
+  { label: 'Office', value: 'Office 12-49, Mohamed Bin Zayed City, Onwani: 20602, Abu Dhabi – UAE', icon: ICONS.office },
   {
     label: 'LinkedIn',
     value: 'Cardilett HR Advisory and Consultancy',
@@ -66,6 +66,7 @@ export default function Contact() {
         {/* ---- Left column static info ---- */}
         <div className="contact__left">
           <span className="eyebrow reveal">Let&apos;s talk</span>
+          <br />
           <h2 className="section__title reveal">
             Start with a conversation. <em>Leave with a plan.</em>
           </h2>

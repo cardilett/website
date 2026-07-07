@@ -75,7 +75,7 @@ export default function Services({ preview = false }: ServicesProps) {
       )}
 
       <div className="section__head section__head--centered">
-        <span className="eyebrow reveal">What We Do</span>
+        <span className="eyebrow reveal">What We Offer</span>
         <h2 className="section__title reveal">
           A Human Resources advisory and consultancy <em>bank of solutions</em>
         </h2>
