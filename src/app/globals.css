@@ -2321,7 +2321,7 @@ main>section:first-child:not(.hero) {
      the arrow sits right next to the text; text-align keeps both lines flush
      to the content's right edge. */
   width: max-content;
-  text-align: right;
+  text-align: left;
   margin-bottom: 6px;
 }
 
