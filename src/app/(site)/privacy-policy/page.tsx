@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
             Cardilett is a HR advisory and consultancy based in Abu Dhabi, United Arab
             Emirates. For the purposes of the PDPL, Cardilett acts as the data controller for
             personal data collected through the Site. You can reach us using the details in
-            Section&nbsp;9 (Contact us) below.
+            Section&nbsp;12 (Contact us) below.
           </p>
 
           <h2>2. Personal Data We Collect</h2>
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>
             To exercise any of these rights, please contact us using the details in
-            Section&nbsp;9 below. We will respond within a reasonable timeframe and in
+            Section&nbsp;12 below. We will respond within a reasonable timeframe and in
             accordance with applicable law.
           </p>
 

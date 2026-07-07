@@ -10,7 +10,7 @@ interface Diff {
 const DIFFS: Diff[] = [
   {
     title: 'ROI & Measurable Outcomes',
-    body: 'Every engagement ties to a number the business recognises cost saved, time reclaimed, risk averted.',
+    body: 'Every engagement ties to a number the business recognizes cost saved, time reclaimed, risk averted.',
     icon: (
       <path
         d="M3 20h18M5 20V11l7-6 7 6v9M9 20v-6h6v6"

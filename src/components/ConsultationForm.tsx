@@ -8,7 +8,7 @@ const COMM_METHODS = ['Virtual meeting', 'Face-to-face meeting', 'Telephonic con
 
 const SUBJECTS = [
   'HR Strategy & Operating Model',
-  'Organisation Design & Workforce Planning',
+  'Organization Design & Workforce Planning',
   'Talent & Career Development',
   'Performance Management & Analytics',
   'Total Rewards & Budget Modeling',

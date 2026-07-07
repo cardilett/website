@@ -127,7 +127,7 @@ export default function Methodology() {
 
       <p className="method__note reveal">
         This flow reflects our project-based engagement. Advisory and retainer models are tailored
-        to match the cadence of your organisation.
+        to match the cadence of your organization.
       </p>
 
       <SectionCTA />

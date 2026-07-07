@@ -13,14 +13,14 @@ type Case = {
 
 const cases: Case[] = [
   {
-    tag: 'Emiratization',
+    tag: 'Emiratisation',
     metricValue: '12',
     metricSuffix: '+',
     metricLabel: 'Companies',
-    title: 'Workforce & Emiratization',
-    challenge: 'Meeting Emiratization targeted quotas as per the law and regulations.',
+    title: 'Workforce & Emiratisation',
+    challenge: 'Meeting Emiratisation targeted quotas as per the law and regulations.',
     solution:
-      'Implemented a data-driven workforce strategy that integrated Emiratization objectives as the law that focused on fair opportunities and skill based hire while maintaining operational excellence and effective yearly budgeting plan.',
+      'Implemented a data-driven workforce strategy that integrated Emiratisation objectives as required by law, focused on fair opportunities and skill-based hiring while maintaining operational excellence and an effective yearly budgeting plan.',
   },
   {
     tag: 'Compliance',

@@ -29,7 +29,7 @@ export default function Footer() {
           <p>Shaping Better Organization. Begins Here.</p>
           <br></br>
           <p className="foot__fine">
-            A government-enabled, Emirati-led HR consultancy with global experties in a regional context.
+            A government-enabled, Emirati-led HR consultancy with global expertise in a regional context.
           </p>
         </div>
 
