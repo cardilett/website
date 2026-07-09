@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
             Cardilett HR Advisory and Consultancy (&ldquo;Cardilett&rdquo;, &ldquo;we&rdquo;,
             &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is an Abu Dhabi based L.L.C &ndash; S.P.C
             company in the United Arab Emirates, that is committed to protecting the data and
-            privacy of cardilett.ae (the &ldquo;Site&rdquo;, &ldquo;Website&rdquo;) visitors and
+            privacy of cardilett.ae (the &ldquo;Site&rdquo;, &ldquo;Website&rdquo;, &ldquo;Page&rdquo;) visitors and
             the clients&apos; data. This Privacy Policy is in accordance with the United Arab
             Emirates&apos; Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data
             (the &ldquo;PDPL&rdquo;) and its implementing regulations, as well as any applicable
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
           <h2>4. No Use of Cookies</h2>
           <p>
             The Site does not use cookies or any similar tracking technologies. We use Microsoft
-            Clarity, which operates in a cookie-less mode, solely to understand aggregate Site
+            Clarity, which does not collect personal data, solely to understand aggregate Site
             usage such as pages viewed and general on-page behaviour (including via heatmaps and
             session recordings). This tool does not set cookies, does not track visitors
             individually, and no personal data is collected or stored as a result.
