@@ -8,14 +8,6 @@ const EXPLORE = [
   { href: '/contact', label: 'Contact' },
 ];
 
-const PRACTICES = [
-  'HR Strategy & Operating Model',
-  'Organization Design',
-  'Total Rewards & Budgeting',
-  'Talent & Leadership',
-  'Policies & Compliance',
-];
-
 const YEAR = new Date().getFullYear();
 
 export default function Footer() {
@@ -46,21 +38,23 @@ export default function Footer() {
           </div>
 
           <div className="foot__col">
-            <h5>Practice Areas</h5>
-            <ul>
-              {PRACTICES.map((p) => (
-                <li key={p}>
-                  <Link href="/services">{p}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="foot__col">
             <h5>Connect</h5>
             <ul>
               <li>
                 <a href="mailto:connect@cardilett.ae">connect@cardilett.ae</a>
+              </li>
+              <li>
+                <a href="tel:+971507657311">+971 50 765 7311</a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/971507657311"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Message Cardilett on WhatsApp"
+                >
+                  WhatsApp
+                </a>
               </li>
               <li>
                 <a
