@@ -53,7 +53,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Message Cardilett on WhatsApp"
                 >
-                  WhatsApp
+                  Cardilett WhatsApp
                 </a>
               </li>
               <li>
@@ -63,7 +63,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Cardilett on LinkedIn"
                 >
-                  LinkedIn
+                  Cardilett LinkedIn
                 </a>
               </li>
               <li>Office 12-49, Mohamed Bin Zayed City, Onwani: 20602, Abu Dhabi – UAE</li>
