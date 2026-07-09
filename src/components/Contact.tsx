@@ -77,7 +77,7 @@ const CONTACT_ROWS = [
   },
   {
     label: 'WhatsApp',
-    value: '+971 50 765 7311',
+    value: 'WhatsApp',
     href: 'https://wa.me/971507657311',
     ariaLabel: 'Message Cardilett on WhatsApp',
     icon: ICONS.whatsapp,
