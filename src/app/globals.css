@@ -3268,15 +3268,12 @@ a.ceo-connect__link--phone:hover {
   max-width: 14ch;
 }
 
-.contact__row a,
-.contact__row span {
-  overflow-wrap: anywhere;
-}
+
 
 .contact__lede {
   margin-top: 24px;
   font-size: clamp(17px, 1.4vw, 20px);
-  color: rgba(251, 237, 221, 0.82);
+  color: rgba(255, 255, 255, 1);
   line-height: 1.55;
   max-width: 42ch;
 }
@@ -3284,49 +3281,64 @@ a.ceo-connect__link--phone:hover {
 .contact__meta {
   margin-top: 44px;
   display: flex;
-  flex-direction: column;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .contact__row {
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  gap: 20px;
-  padding: 13px 0;
-  border-top: 1px solid rgba(251, 237, 221, 0.16);
-  font-size: 15.5px;
+  flex: 0 0 auto;
 }
 
-.contact__row:last-child {
-  border-bottom: 1px solid rgba(251, 237, 221, 0.16);
-}
-
-.contact__label {
-  display: flex;
+/* Clickable button pill */
+.contact__btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding-top: 2px;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: var(--r-pill, 999px);
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+  transition: background .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
-.contact__label-icon {
+/* Plain text info row (Office, Hours) */
+.contact__info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.contact__btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.contact__btn-icon {
   display: inline-flex;
   flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  color: var(--gold-soft);
+  width: 18px;
+  height: 18px;
+  color: inherit;
 }
 
-.contact__label-icon svg {
+.contact__btn-icon svg {
   width: 100%;
   height: 100%;
 }
 
-.contact__row a {
-  color: var(--gold-soft);
-}
-
-.contact__row a:hover {
-  color: var(--sand);
+.contact__btn-text {
+  white-space: nowrap;
 }
 
 /* Same card treatment as the "book a free consultation" popup, embedded
@@ -3361,11 +3373,12 @@ a.ceo-connect__link--phone:hover {
 
   .contact__meta {
     margin-top: 28px;
-    gap: 12px;
+    gap: 10px;
   }
 
-  .contact__row {
-    padding: 11px 0;
+  .contact__btn {
+    padding: 10px 16px;
+    font-size: 13.5px;
   }
 }
 

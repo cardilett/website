@@ -84,7 +84,7 @@ const CONTACT_ROWS = [
   },
   {
     label: 'LinkedIn',
-    value: 'Cardilett LinkedIn',
+    value: 'LinkedIn',
     href: 'https://www.linkedin.com/company/cardilett/',
     ariaLabel: 'Cardilett on LinkedIn',
     icon: ICONS.linkedin,
@@ -114,21 +114,23 @@ export default function Contact() {
           <div className="contact__meta reveal">
             {CONTACT_ROWS.map(({ label, value, href, ariaLabel, icon }) => (
               <div key={label} className="contact__row">
-                <span className="contact__label" aria-label={label} title={label}>
-                  <span className="contact__label-icon">{icon}</span>
-                </span>
                 {href ? (
                   <a
+                    className="contact__btn"
                     href={href}
                     {...(href.startsWith('http')
                       ? { target: '_blank', rel: 'noopener noreferrer' }
                       : {})}
                     {...(ariaLabel ? { 'aria-label': ariaLabel } : {})}
                   >
-                    {value}
+                    <span className="contact__btn-icon">{icon}</span>
+                    <span className="contact__btn-text">{value}</span>
                   </a>
                 ) : (
-                  <span>{value}</span>
+                  <div className="contact__info">
+                    <span className="contact__btn-icon">{icon}</span>
+                    <span>{value}</span>
+                  </div>
                 )}
               </div>
             ))}
