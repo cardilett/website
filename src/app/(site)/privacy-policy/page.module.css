@@ -64,3 +64,27 @@
   color: var(--crimson);
   text-decoration: underline;
 }
+
+.legal__disclaimer {
+  margin: 0 0 2.4em;
+  padding: 1.4em 1.6em;
+  background: var(--sand-dim);
+  border-left: 3px solid var(--crimson);
+  border-radius: var(--r-sm);
+}
+
+.legal__disclaimer h2 {
+  margin: 0 0 0.6em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--crimson);
+}
+
+.legal__disclaimer p {
+  margin: 0 0 0.9em;
+}
+
+.legal__disclaimer p:last-child {
+  margin-bottom: 0;
+}

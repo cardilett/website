@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     'How Cardilett collects, uses, and protects personal data in line with UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data.',
 };
 
-const UPDATED = 'June 26, 2026';
+const UPDATED = 'July 9, 2026';
 
 export default function PrivacyPolicyPage() {
   return (
@@ -23,31 +23,41 @@ export default function PrivacyPolicyPage() {
 
       <section className={styles.legal__body}>
         <div className={styles.legal__prose}>
-          <p>
-            Cardilett HR Advisory and Consultancy (&ldquo;Cardilett&rdquo;, &ldquo;we&rdquo;,
-            &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting the privacy of
-            visitors to cardilett.ae (the &ldquo;Site&rdquo;) and the clients and contacts we
-            work with. This Privacy Policy explains what personal data we collect, why we
-            collect it, how we use and protect it, and the rights available to you.
-          </p>
-          <p>
-            We process personal data in accordance with the United Arab Emirates&apos; Federal
-            Decree-Law No. 45 of 2021 on the Protection of Personal Data (the &ldquo;PDPL&rdquo;)
-            and its implementing regulations, as well as any applicable free-zone data
-            protection law where relevant. By using the Site, you acknowledge the practices
-            described in this Policy.
-          </p>
+          <div className={styles.legal__disclaimer}>
+            <h2>Disclaimer</h2>
+            <p>
+              Cardilett HR Advisory &amp; Consultancy will never ask for your personal details,
+              contact information, bank or financial information, passwords, OTPs, or
+              verification codes, whether by phone, email, SMS, WhatsApp, or any social media
+              platform, for the purpose of promotions, prizes, lottery winnings, job offers, or
+              any unsolicited offer.
+            </p>
+            <p>
+              We do not sell, rent, or share your information with any other parties for
+              marketing purposes. The only personal data we obtain is what you voluntarily
+              submit through our website&apos;s contact/inquiry form, and this data is used
+              solely to respond to your inquiry and nothing more whatsoever.
+            </p>
+          </div>
 
           <h2>1. Who We Are</h2>
           <p>
-            Cardilett is a HR advisory and consultancy based in Abu Dhabi, United Arab
-            Emirates. For the purposes of the PDPL, Cardilett acts as the data controller for
-            personal data collected through the Site. You can reach us using the details in
-            Section&nbsp;12 (Contact us) below.
+            Cardilett HR Advisory and Consultancy (&ldquo;Cardilett&rdquo;, &ldquo;we&rdquo;,
+            &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is an Abu Dhabi based L.L.C &ndash; S.P.C
+            company in the United Arab Emirates, that is committed to protecting the data and
+            privacy of cardilett.ae (the &ldquo;Site&rdquo;, &ldquo;Website&rdquo;) visitors and
+            the clients&apos; data. This Privacy Policy is in accordance with the United Arab
+            Emirates&apos; Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data
+            (the &ldquo;PDPL&rdquo;) and its implementing regulations, as well as any applicable
+            free-zone data protection law (where relevant). By using the Site, you acknowledge
+            the practices described in this Policy.
           </p>
 
           <h2>2. Personal Data We Collect</h2>
-          <p>We collect the following categories of personal data:</p>
+          <p>
+            We collect the following categories of personal data &ndash; (information you
+            willingly submitted only):
+          </p>
           <ul>
             <li>
               <strong>Contact form submissions.</strong> When you submit our contact form, we
@@ -55,21 +65,16 @@ export default function PrivacyPolicyPage() {
               enquiring about, any message you provide, and your consent to be contacted.
             </li>
             <li>
-              <strong>Usage and analytics data.</strong> We use Google Analytics 4 and
-              Microsoft Clarity to collect information about how visitors interact with the
-              Site, including pages viewed, time on site, approximate location (derived from IP
-              address), device and browser type, referral source, and on-page behaviour such as
-              clicks, scrolling, and mouse movement (via session recordings and heatmaps). This
-              data is collected in aggregated or pseudonymised form and is not used to directly
-              identify you.
+              <strong>Usage and analytics data.</strong> We use Microsoft Clarity, which operates
+              without cookies, to collect anonymised and aggregated information about how
+              visitors interact with the Site, such as pages viewed and general on-page
+              behaviour (via heatmaps and session recordings). No cookies are used, and no
+              personal data is collected or stored through this process.
             </li>
             <li>
-              <strong>Cookie and consent data.</strong> We use CookieScript to manage cookie
-              consent and to record your cookie preferences. See Section&nbsp;4 (Cookies) below.
-            </li>
-            <li>
-              <strong>Correspondence.</strong> If you contact us directly by email or
-              telephone, we retain that correspondence and any personal data it contains.
+              <strong>Correspondence.</strong> If you contact us directly by email or telephone,
+              we retain that correspondence data for the sole purpose of contacting you as per
+              your enquiry/request and nothing more whatsoever.
             </li>
           </ul>
 
@@ -77,54 +82,34 @@ export default function PrivacyPolicyPage() {
           <p>We use the personal data described above to:</p>
           <ul>
             <li>Respond to enquiries submitted through the contact form;</li>
-            <li>Provide, discuss, and follow up on our HR advisory services;</li>
+            <li>Provide, discuss, and follow up on Cardilett provided services;</li>
             <li>Understand and improve how visitors use the Site;</li>
             <li>Maintain the security and proper functioning of the Site; and</li>
             <li>Comply with our legal and regulatory obligations under UAE law.</li>
           </ul>
           <p>
             Our legal bases for processing include your consent (for example, the consent
-            checkbox on our contact form and your cookie preferences), our legitimate interest
-            in operating and improving the Site and responding to business enquiries, and
-            compliance with applicable legal obligations.
+            checkbox on our contact form), our legitimate interest in operating and improving
+            the Site and responding to business enquiries, and compliance with applicable legal
+            obligations.
           </p>
 
-          <h2>4. Cookies and Similar Technologies</h2>
+          <h2>4. No Use of Cookies</h2>
           <p>
-            The Site uses cookies and similar technologies operated through CookieScript, our
-            consent management platform, which allows you to accept, reject, or customise
-            cookie categories before any non-essential cookie is set.
-          </p>
-          <ul>
-            <li>
-              <strong>Strictly necessary cookies</strong> are required for the Site to function
-              and cannot be disabled.
-            </li>
-            <li>
-              <strong>Analytics cookies</strong> (Google Analytics 4, via Google Tag Manager,
-              and Microsoft Clarity) are only set once you provide consent, and help us
-              understand Site usage in aggregate, including through session recordings and
-              heatmaps.
-            </li>
-          </ul>
-          <p>
-            We apply Google&apos;s Consent Mode, meaning analytics and advertising signals
-            default to &ldquo;denied&rdquo; until you actively grant consent through the
-            CookieScript banner. You may change or withdraw your cookie preferences at any time
-            using the cookie settings link available on the Site, or by adjusting your browser
-            settings.
+            The Site does not use cookies or any similar tracking technologies. We use Microsoft
+            Clarity, which operates in a cookie-less mode, solely to understand aggregate Site
+            usage such as pages viewed and general on-page behaviour (including via heatmaps and
+            session recordings). This tool does not set cookies, does not track visitors
+            individually, and no personal data is collected or stored as a result.
           </p>
 
           <h2>5. Data Sharing and Disclosure</h2>
-          <p>
-            We do not sell personal data. We may share personal data with:
-          </p>
+          <p>We do not sell personal data whatsoever. We may only share personal data with:</p>
           <ul>
             <li>
               Service providers who process data on our behalf, such as our email delivery
-              provider, hosting and database providers, and Google and Microsoft (for
-              analytics, tag management, and session-recording tools), each acting under
-              contractual obligations to protect your data;
+              provider, hosting and database providers, and Microsoft (for the Clarity analytics
+              tool), each acting under contractual obligations to protect your data;
             </li>
             <li>
               Professional advisors, regulators, or authorities where required by UAE law or to
@@ -138,20 +123,19 @@ export default function PrivacyPolicyPage() {
 
           <h2>6. International Transfers</h2>
           <p>
-            Some of our service providers, including Google and Microsoft, may process data on
-            servers located outside the UAE. Where personal data is transferred outside the UAE, we
-            take reasonable steps to ensure such transfers are subject to appropriate
-            safeguards consistent with the PDPL, including reliance on providers that maintain
-            recognised international data protection standards.
+            Some of our service providers, including Microsoft, may process data on servers
+            located outside the UAE. Where personal data is transferred outside the UAE, we take
+            reasonable steps to ensure such transfers are subject to appropriate safeguards
+            consistent with the PDPL, including reliance on providers that maintain recognised
+            international data protection standards.
           </p>
 
           <h2>7. Data Retention</h2>
           <p>
             We retain contact form submissions and related correspondence for as long as
-            necessary to respond to your enquiry, maintain our client relationship, and meet
-            our legal, accounting, or reporting obligations, after which it is securely deleted
-            or anonymised. Analytics data is retained in accordance with Google Analytics&apos;
-            and Microsoft Clarity&apos;s standard retention settings.
+            necessary to respond to your enquiry, maintain our client relationship, and meet our
+            legal, accounting, or reporting obligations, after which it is securely deleted or
+            anonymised.
           </p>
 
           <h2>8. Your Rights</h2>
@@ -173,15 +157,24 @@ export default function PrivacyPolicyPage() {
           <h2>9. Data Security</h2>
           <p>
             We implement appropriate technical and organisational measures designed to protect
-            personal data against unauthorised access, loss, misuse, or alteration. While we
-            take reasonable steps to safeguard your data, no method of transmission or storage
-            is completely secure, and we cannot guarantee absolute security.
+            personal data against unauthorised access, loss, misuse, or alteration. While we take
+            reasonable steps to safeguard your data, no method of transmission or storage is
+            completely secure, and we cannot guarantee absolute security. Therefore, and to be
+            completely and always transparent, Cardilett will never approach or contact you
+            through any communication channel other than the one you used when you submitted
+            your enquiry. We encourage you to be cautious, to disregard anything you may receive
+            in the name of Cardilett that falls outside this Privacy Policy, and to contact us if
+            you feel that any approach was inconsistent with this Policy &ndash; this allows us
+            to take immediate corrective action aimed at protecting your safety and data
+            confidentiality.
           </p>
 
           <h2>10. Children&apos;s Privacy</h2>
           <p>
-            The Site is intended for business audiences and is not directed at children. We do
-            not knowingly collect personal data from individuals under the age of 18.
+            The Site is intended for employees and business audiences in the UAE and is not
+            directed at children whatsoever. We do not knowingly communicate or engage with any
+            individual under the age of 18 and, should we become aware of a user&apos;s age at
+            any point, we shall stop the communication or engagement immediately.
           </p>
 
           <h2>11. Changes to This Policy</h2>
@@ -189,7 +182,7 @@ export default function PrivacyPolicyPage() {
             We may update this Privacy Policy from time to time to reflect changes in our
             practices or applicable law. The &ldquo;Last updated&rdquo; date at the top of this
             page indicates when this Policy was last revised. We encourage you to review this
-            page periodically.
+            page periodically and to exercise your rights accordingly.
           </p>
 
           <h2>12. Contact us</h2>
@@ -203,7 +196,7 @@ export default function PrivacyPolicyPage() {
             Abu Dhabi, United Arab Emirates
             <br />
             Email:{' '}
-            <a href="mailto:connect@cardilett.ae">connect@cardilett.ae</a>
+            <a href="mailto:assist@cardilett.ae">assist@cardilett.ae</a>
           </p>
         </div>
       </section>
