@@ -10,7 +10,7 @@ interface Value {
 // icon-card pattern: a coloured tile topped with a circular badge icon.
 const VALUES: Value[] = [
   {
-    title: 'Cultural Appreciation',
+    title: 'Cultural\nAppreciation',
     tone: 'gold',
     img: '/img/values/cultural-appreciation.png',
   },
@@ -25,12 +25,12 @@ const VALUES: Value[] = [
     img: '/img/values/integrity.png',
   },
   {
-    title: 'Forward Thinking',
+    title: 'Forward\nThinking',
     tone: 'periwinkle',
     img: '/img/values/forward-thinking.png',
   },
   {
-    title: 'Elevated Standards',
+    title: 'Elevated\nStandards',
     tone: 'teal',
     img: '/img/values/elevated-standards.png',
   },
@@ -57,7 +57,7 @@ export default function MissionValues() {
             models, workforce strategies, governance frameworks, and end-to-end HR systems. By
             combining global best practices with deep regional expertise, we deliver tailored
             solutions in organizational design, HR policy, rewards, capability development, people
-            analytics, and technology integration&mdash;driving measurable outcomes, operational
+            analytics, and technology integration, driving measurable outcomes, operational
             excellence, transparency, and sustainable capability transfer.
           </p>
         </div>

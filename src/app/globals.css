@@ -1458,6 +1458,7 @@ main>section:first-child:not(.hero) {
 }
 
 @media (max-width: 700px) {
+
   /* The 500px overshoot and 220px of extra padding were tuned for desktop;
      on narrow viewports they blow the section out to an empty wall of sky.
      Pin the image flush to the section box and disable the parallax transform
@@ -1717,10 +1718,10 @@ main>section:first-child:not(.hero) {
 }
 
 /* Keep all real content above the backdrop. */
-.method > .section__head,
-.method > .method__flow,
-.method > .method__note,
-.method > .section-cta {
+.method>.section__head,
+.method>.method__flow,
+.method>.method__note,
+.method>.section-cta {
   position: relative;
   z-index: 1;
 }
@@ -2103,7 +2104,7 @@ main>section:first-child:not(.hero) {
    the Differentiators cards). "Our Values" kicker sits above the grid. */
 .values {
   max-width: var(--max);
-  margin: clamp(48px, 6vw, 76px) auto 0;
+  margin: clamp(36px, 6vw, 64px) auto 0;
 }
 
 .values__eyebrow {
@@ -2120,7 +2121,7 @@ main>section:first-child:not(.hero) {
 .values__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(30px, 3.2vw, 40px);
+  gap: clamp(15px, 3.2vw, 20px);
 }
 
 .value {
@@ -2130,8 +2131,8 @@ main>section:first-child:not(.hero) {
   background: var(--tile);
   color: #fff;
   border-radius: var(--r-lg);
-  padding: clamp(28px, 3vw, 40px);
-  min-height: 190px;
+  padding: clamp(16px, 2vw, 24px);
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2174,6 +2175,7 @@ main>section:first-child:not(.hero) {
   font-size: clamp(18px, 1.4vw, 22px);
   letter-spacing: -0.02em;
   color: #fff;
+  white-space: pre-line;
 }
 
 /* Per-tile brand colours (pulled from the token palette) */
@@ -2197,6 +2199,7 @@ main>section:first-child:not(.hero) {
   .values__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   /* Drop the two-row span so tiles flow evenly when reflowed. */
   .value--crimson {
     grid-row: auto;
@@ -2207,6 +2210,7 @@ main>section:first-child:not(.hero) {
   .values__grid {
     grid-template-columns: 1fr;
   }
+
   .value {
     min-height: 0;
   }

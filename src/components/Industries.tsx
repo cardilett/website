@@ -58,7 +58,7 @@ export default function Industries() {
         <span className="eyebrow reveal">Who We Serve</span>
         <br />
         <h2 className="section__title reveal">
-          Trusted across every sector that <em>shapes the UAE.</em>
+          Trusted across UAE’s Industries and actively <em>expanding</em> into adjacent sectors
         </h2>
       </div>
 

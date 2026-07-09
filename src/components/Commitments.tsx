@@ -27,7 +27,7 @@ export default function Commitments() {
         <span className="eyebrow reveal">Our Commitments</span>
         <br />
         <h2 className="section__title reveal">
-          Three promises we make on <em>every</em> engagement.
+          Three <em>promises</em> we make on every engagement.
         </h2>
       </div>
 

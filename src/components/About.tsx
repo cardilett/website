@@ -36,15 +36,12 @@ export default function About() {
           </p>
           <p className="about__para reveal">
             In a market filled with HR consulting firms, <b>Cardilett</b> distinguishes itself as
-            the only <strong>fully Emirati-owned Company</strong>, pioneering top-level
-            sophisticated, forward-thinking and innovative services that are truly incomparable.
-            While we are a young firm, we have ambitious plans, targeting significant and timely
-            contributions towards &ldquo;We the UAE 2031&rdquo; &mdash; all through evidence-based
-            strategies and sovereign design.
+            the only <strong>fully Emirati-owned Company</strong>, pioneering top-level sophisticated, forward-thinking and innovative services that are truly incomparable.
+            While we are a young firm, we have ambitious plans, targeting significant and timely contributions towards the UAE future agenda, all through evidence-based strategies and sovereign design.
           </p>
 
           <div className="about__vision reveal">
-            <span className="about__vision-label">Aligned with We the UAE 2031 vision</span>
+            <span className="about__vision-label">Aligned with We the UAE vision</span>
             <ul className="about__vision-pills">
               {VISION_PILLARS.map((p) => (
                 <li key={p}>{p}</li>

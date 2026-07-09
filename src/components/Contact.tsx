@@ -77,19 +77,19 @@ const CONTACT_ROWS = [
   },
   {
     label: 'WhatsApp',
-    value: 'WhatsApp',
+    value: 'Cardilett WhatsApp',
     href: 'https://wa.me/971507657311',
     ariaLabel: 'Message Cardilett on WhatsApp',
     icon: ICONS.whatsapp,
   },
-  { label: 'Office', value: 'Office 12-49, Mohamed Bin Zayed City, Onwani: 20602, Abu Dhabi – UAE', icon: ICONS.office },
   {
     label: 'LinkedIn',
-    value: 'Cardilett HR Advisory and Consultancy',
+    value: 'Cardilett LinkedIn',
     href: 'https://www.linkedin.com/company/cardilett/',
     ariaLabel: 'Cardilett on LinkedIn',
     icon: ICONS.linkedin,
   },
+  { label: 'Office', value: 'Office 12-49, Mohamed Bin Zayed City, Onwani: 20602, Abu Dhabi – UAE', icon: ICONS.office },
   { label: 'Hours', value: 'Mon–Fri · 08:00–16:00 UAE time', icon: ICONS.hours },
 ];
 
