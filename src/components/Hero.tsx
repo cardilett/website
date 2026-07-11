@@ -29,7 +29,7 @@ export default function Hero() {
 
       <div className="hero__inner">
         <h1 className="hero__title">
-          <span className="reveal">Shaping Better Organization</span>
+          <span className="reveal">Shaping Better Organizations,</span>
           <span className="reveal"><em>Begins Here.</em></span>
         </h1>
 

@@ -26,13 +26,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://cardilett.ae'),
   title: {
-    default: 'Cardilett - Shaping Better Organization, Begins Here.',
+    default: 'Cardilett - Shaping Better Organizations, Begins Here.',
     template: '%s Cardilett',
   },
   description:
     'Cardilett is a UAE-based, Emirati-led HR consultancy delivering with regional agility. Redefining HR through Innovation, Integration, and Impact.',
   openGraph: {
-    title: 'Cardilett - Shaping Better Organization, Begins Here.',
+    title: 'Cardilett - Shaping Better Organizations, Begins Here.',
     description:
       'Cardilett is a UAE-based, Emirati-led HR consultancy delivering with regional agility. Redefining HR through Innovation, Integration, and Impact.',
     url: 'https://cardilett.ae',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: 'https://cardilett.ae/img/cardilett-og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Cardilett - Shaping Better Organization, Begins Here.',
+        alt: 'Cardilett - Shaping Better Organizations, Begins Here.',
       },
     ],
     locale: 'en_US',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cardilett - Shaping Better Organization, Begins Here.',
+    title: 'Cardilett - Shaping Better Organizations, Begins Here.',
     description:
       'Cardilett is a UAE-based, Emirati-led HR consultancy delivering with regional agility. Redefining HR through Innovation, Integration, and Impact.',
     images: ['https://cardilett.ae/img/cardilett-og-image.jpg'],

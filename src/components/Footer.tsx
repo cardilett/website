@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href="/" className="foot__mark" aria-label="Cardilett home">
             <img src="/img/logo-combined.png" alt="Cardilett" className="foot__logo" />
           </Link>
-          <p>Shaping Better Organization, Begins Here.</p>
+          <p>Shaping Better Organizations, Begins Here.</p>
           <br></br>
           <p className="foot__fine">
             A government-enabled, Emirati-led HR consultancy with global expertise in a regional context.
